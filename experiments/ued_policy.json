@@ -1,0 +1,296 @@
+{
+  "enron": {
+    "ued": {
+      "adversarial": 0.4075,
+      "attr_struct_mismatch": 0.4396,
+      "community": 0.304,
+      "conformity": 0.2363,
+      "contrastive": 0.4481,
+      "density": 0.384,
+      "homophily_violation": 0.4137,
+      "local_affinity": 0.243,
+      "one_class": 0.4328,
+      "reconstruction": 0.2959,
+      "spectral": 0.3458
+    },
+    "ued_top1": {
+      "selected": [
+        "contrastive"
+      ],
+      "auroc": 45.9
+    },
+    "ued_top2": {
+      "selected": [
+        "contrastive",
+        "attr_struct_mismatch"
+      ],
+      "auroc": 45.4
+    },
+    "ued_top3": {
+      "selected": [
+        "contrastive",
+        "attr_struct_mismatch",
+        "one_class"
+      ],
+      "auroc": 50.7
+    }
+  },
+  "books": {
+    "ued": {
+      "adversarial": 0.4,
+      "attr_struct_mismatch": 0.4219,
+      "attribute_inflation": 0.3379,
+      "community": 0.3468,
+      "contrastive": 0.5838,
+      "density": 0.3605,
+      "homophily_violation": 0.4729,
+      "local_affinity": 0.4,
+      "one_class": 0.3004,
+      "reconstruction": 0.3018,
+      "spectral": 0.3848
+    },
+    "ued_top1": {
+      "selected": [
+        "contrastive"
+      ],
+      "auroc": 46.7
+    },
+    "ued_top2": {
+      "selected": [
+        "contrastive",
+        "homophily_violation"
+      ],
+      "auroc": 37.2
+    },
+    "ued_top3": {
+      "selected": [
+        "contrastive",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "auroc": 36.3
+    }
+  },
+  "disney": {
+    "ued": {
+      "attr_struct_mismatch": 0.4394,
+      "community": 0.4872,
+      "contrastive": 0.3996,
+      "density": 0.3961,
+      "homophily_violation": 0.342,
+      "local_affinity": 0.3807,
+      "one_class": 0.3868,
+      "peripheral_mismatch": 0.6089,
+      "reconstruction": 0.392,
+      "spectral": 0.3991
+    },
+    "ued_top1": {
+      "selected": [
+        "peripheral_mismatch"
+      ],
+      "auroc": 86.4
+    },
+    "ued_top2": {
+      "selected": [
+        "peripheral_mismatch",
+        "community"
+      ],
+      "auroc": 86.4
+    },
+    "ued_top3": {
+      "selected": [
+        "peripheral_mismatch",
+        "community",
+        "attr_struct_mismatch"
+      ],
+      "auroc": 86.4
+    }
+  },
+  "weibo": {
+    "ued": {
+      "adversarial": 0.4643,
+      "attr_struct_mismatch": 0.3823,
+      "community": 0.4287,
+      "contrastive": 0.3813,
+      "density": 0.4447,
+      "homophily_violation": 0.4072,
+      "linear_residual": 0.2023,
+      "local_affinity": 0.6081,
+      "one_class": 0.3862,
+      "reconstruction": 0.3952,
+      "spectral": 0.5443,
+      "subgraph_contrast": 0.3907
+    },
+    "ued_top1": {
+      "selected": [
+        "local_affinity"
+      ],
+      "auroc": 25.7
+    },
+    "ued_top2": {
+      "selected": [
+        "local_affinity",
+        "spectral"
+      ],
+      "auroc": 47.0
+    },
+    "ued_top3": {
+      "selected": [
+        "local_affinity",
+        "spectral",
+        "adversarial"
+      ],
+      "auroc": 63.4
+    }
+  },
+  "inj_amazon": {
+    "ued": {
+      "adversarial": 0.4188,
+      "attr_struct_mismatch": 0.453,
+      "community": 0.387,
+      "contrastive": 0.4067,
+      "density": 0.2132,
+      "homophily_violation": 0.3636,
+      "local_affinity": 0.0629,
+      "one_class": 0.6143,
+      "reconstruction": 0.3546,
+      "spectral": 0.5597,
+      "subgraph_contrast": 0.5179
+    },
+    "ued_top1": {
+      "selected": [
+        "one_class"
+      ],
+      "auroc": 50.0
+    },
+    "ued_top2": {
+      "selected": [
+        "one_class",
+        "spectral"
+      ],
+      "auroc": 74.8
+    },
+    "ued_top3": {
+      "selected": [
+        "one_class",
+        "spectral",
+        "subgraph_contrast"
+      ],
+      "auroc": 88.2
+    }
+  },
+  "acm": {
+    "ued": {
+      "adversarial": 0.3022,
+      "attr_struct_mismatch": 0.5179,
+      "clique_density": 0.4062,
+      "community": 0.2697,
+      "contrastive": 0.4784,
+      "density": 0.1765,
+      "homophily_violation": 0.3454,
+      "local_affinity": 0.3781,
+      "one_class": 0.4,
+      "reconstruction": 0.2502,
+      "spectral": 0.5748,
+      "subgraph_contrast": 0.3413
+    },
+    "ued_top1": {
+      "selected": [
+        "spectral"
+      ],
+      "auroc": 76.0
+    },
+    "ued_top2": {
+      "selected": [
+        "spectral",
+        "attr_struct_mismatch"
+      ],
+      "auroc": 75.9
+    },
+    "ued_top3": {
+      "selected": [
+        "spectral",
+        "attr_struct_mismatch",
+        "contrastive"
+      ],
+      "auroc": 65.1
+    }
+  },
+  "blogcatalog": {
+    "ued": {
+      "adversarial": 0.3676,
+      "attr_struct_mismatch": 0.5192,
+      "clique_density": 0.3496,
+      "community": 0.2992,
+      "contrastive": 0.3527,
+      "density": 0.2379,
+      "homophily_violation": 0.2968,
+      "local_affinity": 0.3845,
+      "one_class": 0.4,
+      "reconstruction": 0.3003,
+      "spectral": 0.5093,
+      "subgraph_contrast": 0.5086
+    },
+    "ued_top1": {
+      "selected": [
+        "attr_struct_mismatch"
+      ],
+      "auroc": 44.8
+    },
+    "ued_top2": {
+      "selected": [
+        "attr_struct_mismatch",
+        "spectral"
+      ],
+      "auroc": 60.1
+    },
+    "ued_top3": {
+      "selected": [
+        "attr_struct_mismatch",
+        "spectral",
+        "subgraph_contrast"
+      ],
+      "auroc": 75.6
+    }
+  },
+  "cola_flickr": {
+    "ued": {
+      "adversarial": 0.4415,
+      "attr_struct_mismatch": 0.3994,
+      "clique_density": 0.328,
+      "community": 0.271,
+      "contrastive": 0.4646,
+      "density": 0.2916,
+      "homophily_violation": 0.2649,
+      "local_affinity": 0.2964,
+      "one_class": 0.4,
+      "reconstruction": 0.2773,
+      "spectral": 0.5557,
+      "subgraph_contrast": 0.5571
+    },
+    "ued_top1": {
+      "selected": [
+        "subgraph_contrast"
+      ],
+      "auroc": 78.3
+    },
+    "ued_top2": {
+      "selected": [
+        "subgraph_contrast",
+        "spectral"
+      ],
+      "auroc": 75.4
+    },
+    "ued_top3": {
+      "selected": [
+        "subgraph_contrast",
+        "spectral",
+        "contrastive"
+      ],
+      "auroc": 69.2
+    }
+  },
+  "ued_top1_avg": 56.7,
+  "ued_top2_avg": 62.8,
+  "ued_top3_avg": 66.9
+}

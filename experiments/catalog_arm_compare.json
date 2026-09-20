@@ -1,0 +1,576 @@
+{
+  "amazon_fraud": {
+    "single_view": {
+      "adversarial": 33.2,
+      "attr_struct_mismatch": 53.2,
+      "community": 52.2,
+      "contrastive": 54.6,
+      "density": 54.6,
+      "homophily_violation": 32.0,
+      "local_affinity": 59.9,
+      "one_class": 64.4,
+      "reconstruction": 26.7,
+      "spectral": 33.1
+    },
+    "decisions": [
+      {
+        "arm": "study",
+        "model": "qwen3:8b",
+        "repeat": 0,
+        "auroc": 48.9,
+        "selected": [
+          "attr_struct_mismatch",
+          "local_affinity",
+          "homophily_violation",
+          "spectral"
+        ],
+        "lead": "attr_struct_mismatch",
+        "mode": "aom",
+        "per_view": {
+          "attr_struct_mismatch": 53.2,
+          "local_affinity": 59.9,
+          "homophily_violation": 32.0,
+          "spectral": 33.1
+        }
+      },
+      {
+        "arm": "study",
+        "model": "qwen3:8b",
+        "repeat": 1,
+        "auroc": 48.9,
+        "selected": [
+          "attr_struct_mismatch",
+          "local_affinity",
+          "homophily_violation",
+          "spectral"
+        ],
+        "lead": "attr_struct_mismatch",
+        "mode": "aom",
+        "per_view": {
+          "attr_struct_mismatch": 53.2,
+          "local_affinity": 59.9,
+          "homophily_violation": 32.0,
+          "spectral": 33.1
+        }
+      },
+      {
+        "arm": "study",
+        "model": "qwen3:8b",
+        "repeat": 2,
+        "auroc": 48.9,
+        "selected": [
+          "attr_struct_mismatch",
+          "local_affinity",
+          "homophily_violation",
+          "spectral"
+        ],
+        "lead": "attr_struct_mismatch",
+        "mode": "aom",
+        "per_view": {
+          "attr_struct_mismatch": 53.2,
+          "local_affinity": 59.9,
+          "homophily_violation": 32.0,
+          "spectral": 33.1
+        }
+      },
+      {
+        "arm": "domain",
+        "model": "claude:haiku",
+        "repeat": 0,
+        "auroc": 53.7,
+        "selected": [
+          "local_affinity",
+          "attr_struct_mismatch",
+          "spectral"
+        ],
+        "lead": "local_affinity",
+        "mode": "aom",
+        "per_view": {
+          "local_affinity": 59.9,
+          "attr_struct_mismatch": 53.2,
+          "spectral": 33.1
+        }
+      },
+      {
+        "arm": "domain",
+        "model": "claude:haiku",
+        "repeat": 1,
+        "auroc": 60.2,
+        "selected": [
+          "attr_struct_mismatch",
+          "local_affinity"
+        ],
+        "lead": "attr_struct_mismatch",
+        "mode": "aom",
+        "per_view": {
+          "attr_struct_mismatch": 53.2,
+          "local_affinity": 59.9
+        }
+      },
+      {
+        "arm": "domain",
+        "model": "claude:haiku",
+        "repeat": 2,
+        "auroc": 53.7,
+        "selected": [
+          "local_affinity",
+          "attr_struct_mismatch",
+          "spectral"
+        ],
+        "lead": "local_affinity",
+        "mode": "aom",
+        "per_view": {
+          "local_affinity": 59.9,
+          "attr_struct_mismatch": 53.2,
+          "spectral": 33.1
+        }
+      },
+      {
+        "arm": "domain",
+        "model": "claude:opus",
+        "repeat": 0,
+        "auroc": 49.4,
+        "selected": [
+          "attr_struct_mismatch",
+          "one_class",
+          "reconstruction"
+        ],
+        "lead": "attr_struct_mismatch",
+        "mode": "aom",
+        "per_view": {
+          "attr_struct_mismatch": 53.2,
+          "one_class": 64.4,
+          "reconstruction": 26.7
+        }
+      },
+      {
+        "arm": "domain",
+        "model": "claude:opus",
+        "repeat": 1,
+        "auroc": 60.9,
+        "selected": [
+          "one_class",
+          "attr_struct_mismatch",
+          "density"
+        ],
+        "lead": "one_class",
+        "mode": "aom",
+        "per_view": {
+          "one_class": 64.4,
+          "attr_struct_mismatch": 53.2,
+          "density": 54.6
+        }
+      },
+      {
+        "arm": "domain",
+        "model": "claude:opus",
+        "repeat": 2,
+        "auroc": 50.1,
+        "selected": [
+          "one_class",
+          "attr_struct_mismatch",
+          "density",
+          "reconstruction"
+        ],
+        "lead": "one_class",
+        "mode": "aom",
+        "per_view": {
+          "one_class": 64.4,
+          "attr_struct_mismatch": 53.2,
+          "density": 54.6,
+          "reconstruction": 26.7
+        }
+      },
+      {
+        "arm": "domain",
+        "model": "qwen3:8b",
+        "repeat": 0,
+        "auroc": 46.3,
+        "selected": [
+          "contrastive",
+          "homophily_violation",
+          "attr_struct_mismatch"
+        ],
+        "lead": "contrastive",
+        "mode": "aom",
+        "per_view": {
+          "contrastive": 54.6,
+          "homophily_violation": 32.0,
+          "attr_struct_mismatch": 53.2
+        }
+      },
+      {
+        "arm": "domain",
+        "model": "qwen3:8b",
+        "repeat": 1,
+        "auroc": 46.3,
+        "selected": [
+          "contrastive",
+          "homophily_violation",
+          "attr_struct_mismatch"
+        ],
+        "lead": "contrastive",
+        "mode": "aom",
+        "per_view": {
+          "contrastive": 54.6,
+          "homophily_violation": 32.0,
+          "attr_struct_mismatch": 53.2
+        }
+      },
+      {
+        "arm": "domain",
+        "model": "qwen3:8b",
+        "repeat": 2,
+        "auroc": 46.3,
+        "selected": [
+          "contrastive",
+          "homophily_violation",
+          "attr_struct_mismatch"
+        ],
+        "lead": "contrastive",
+        "mode": "aom",
+        "per_view": {
+          "contrastive": 54.6,
+          "homophily_violation": 32.0,
+          "attr_struct_mismatch": 53.2
+        }
+      },
+      {
+        "arm": "rich",
+        "model": "claude:haiku",
+        "repeat": 0,
+        "auroc": 53.7,
+        "selected": [
+          "local_affinity",
+          "attr_struct_mismatch",
+          "spectral"
+        ],
+        "lead": "local_affinity",
+        "mode": "aom",
+        "per_view": {
+          "local_affinity": 59.9,
+          "attr_struct_mismatch": 53.2,
+          "spectral": 33.1
+        }
+      },
+      {
+        "arm": "rich",
+        "model": "claude:haiku",
+        "repeat": 1,
+        "auroc": 60.5,
+        "selected": [
+          "attr_struct_mismatch",
+          "local_affinity",
+          "contrastive"
+        ],
+        "lead": "attr_struct_mismatch",
+        "mode": "aom",
+        "per_view": {
+          "attr_struct_mismatch": 53.2,
+          "local_affinity": 59.9,
+          "contrastive": 54.6
+        }
+      },
+      {
+        "arm": "rich",
+        "model": "claude:haiku",
+        "repeat": 2,
+        "auroc": 53.7,
+        "selected": [
+          "attr_struct_mismatch",
+          "local_affinity",
+          "spectral"
+        ],
+        "lead": "attr_struct_mismatch",
+        "mode": "aom",
+        "per_view": {
+          "attr_struct_mismatch": 53.2,
+          "local_affinity": 59.9,
+          "spectral": 33.1
+        }
+      },
+      {
+        "arm": "rich",
+        "model": "claude:opus",
+        "repeat": 0,
+        "auroc": 62.4,
+        "selected": [
+          "one_class",
+          "density",
+          "contrastive"
+        ],
+        "lead": "one_class",
+        "mode": "aom",
+        "per_view": {
+          "one_class": 64.4,
+          "density": 54.6,
+          "contrastive": 54.6
+        }
+      },
+      {
+        "arm": "rich",
+        "model": "claude:opus",
+        "repeat": 1,
+        "auroc": 54.8,
+        "selected": [
+          "one_class",
+          "density",
+          "adversarial"
+        ],
+        "lead": "one_class",
+        "mode": "aom",
+        "per_view": {
+          "one_class": 64.4,
+          "density": 54.6,
+          "adversarial": 33.2
+        }
+      },
+      {
+        "arm": "rich",
+        "model": "claude:opus",
+        "repeat": 2,
+        "auroc": 54.8,
+        "selected": [
+          "one_class",
+          "density",
+          "adversarial"
+        ],
+        "lead": "one_class",
+        "mode": "aom",
+        "per_view": {
+          "one_class": 64.4,
+          "density": 54.6,
+          "adversarial": 33.2
+        }
+      },
+      {
+        "arm": "rich",
+        "model": "qwen3:8b",
+        "repeat": 0,
+        "auroc": 50.7,
+        "selected": [
+          "local_affinity",
+          "homophily_violation",
+          "community",
+          "attr_struct_mismatch"
+        ],
+        "lead": "local_affinity",
+        "mode": "aom",
+        "per_view": {
+          "local_affinity": 59.9,
+          "homophily_violation": 32.0,
+          "community": 52.2,
+          "attr_struct_mismatch": 53.2
+        }
+      },
+      {
+        "arm": "rich",
+        "model": "qwen3:8b",
+        "repeat": 1,
+        "auroc": 50.7,
+        "selected": [
+          "local_affinity",
+          "homophily_violation",
+          "community",
+          "attr_struct_mismatch"
+        ],
+        "lead": "local_affinity",
+        "mode": "aom",
+        "per_view": {
+          "local_affinity": 59.9,
+          "homophily_violation": 32.0,
+          "community": 52.2,
+          "attr_struct_mismatch": 53.2
+        }
+      },
+      {
+        "arm": "rich",
+        "model": "qwen3:8b",
+        "repeat": 2,
+        "auroc": 50.7,
+        "selected": [
+          "local_affinity",
+          "homophily_violation",
+          "community",
+          "attr_struct_mismatch"
+        ],
+        "lead": "local_affinity",
+        "mode": "aom",
+        "per_view": {
+          "local_affinity": 59.9,
+          "homophily_violation": 32.0,
+          "community": 52.2,
+          "attr_struct_mismatch": 53.2
+        }
+      },
+      {
+        "arm": "rich+domain",
+        "model": "claude:haiku",
+        "repeat": 0,
+        "auroc": 61.1,
+        "selected": [
+          "attr_struct_mismatch",
+          "contrastive",
+          "one_class"
+        ],
+        "lead": "attr_struct_mismatch",
+        "mode": "aom",
+        "per_view": {
+          "attr_struct_mismatch": 53.2,
+          "contrastive": 54.6,
+          "one_class": 64.4
+        }
+      },
+      {
+        "arm": "rich+domain",
+        "model": "claude:haiku",
+        "repeat": 1,
+        "auroc": 61.1,
+        "selected": [
+          "attr_struct_mismatch",
+          "contrastive",
+          "one_class"
+        ],
+        "lead": "attr_struct_mismatch",
+        "mode": "aom",
+        "per_view": {
+          "attr_struct_mismatch": 53.2,
+          "contrastive": 54.6,
+          "one_class": 64.4
+        }
+      },
+      {
+        "arm": "rich+domain",
+        "model": "claude:haiku",
+        "repeat": 2,
+        "auroc": 65.7,
+        "selected": [
+          "attr_struct_mismatch",
+          "local_affinity",
+          "one_class"
+        ],
+        "lead": "attr_struct_mismatch",
+        "mode": "aom",
+        "per_view": {
+          "attr_struct_mismatch": 53.2,
+          "local_affinity": 59.9,
+          "one_class": 64.4
+        }
+      },
+      {
+        "arm": "rich+domain",
+        "model": "claude:opus",
+        "repeat": 0,
+        "auroc": 54.8,
+        "selected": [
+          "one_class",
+          "density",
+          "adversarial"
+        ],
+        "lead": "one_class",
+        "mode": "aom",
+        "per_view": {
+          "one_class": 64.4,
+          "density": 54.6,
+          "adversarial": 33.2
+        }
+      },
+      {
+        "arm": "rich+domain",
+        "model": "claude:opus",
+        "repeat": 1,
+        "auroc": 50.4,
+        "selected": [
+          "one_class",
+          "reconstruction",
+          "density"
+        ],
+        "lead": "one_class",
+        "mode": "aom",
+        "per_view": {
+          "one_class": 64.4,
+          "reconstruction": 26.7,
+          "density": 54.6
+        }
+      },
+      {
+        "arm": "rich+domain",
+        "model": "claude:opus",
+        "repeat": 2,
+        "auroc": 62.4,
+        "selected": [
+          "one_class",
+          "density",
+          "contrastive"
+        ],
+        "lead": "one_class",
+        "mode": "aom",
+        "per_view": {
+          "one_class": 64.4,
+          "density": 54.6,
+          "contrastive": 54.6
+        }
+      },
+      {
+        "arm": "rich+domain",
+        "model": "qwen3:8b",
+        "repeat": 0,
+        "auroc": 50.7,
+        "selected": [
+          "local_affinity",
+          "homophily_violation",
+          "community",
+          "attr_struct_mismatch"
+        ],
+        "lead": "local_affinity",
+        "mode": "aom",
+        "per_view": {
+          "local_affinity": 59.9,
+          "homophily_violation": 32.0,
+          "community": 52.2,
+          "attr_struct_mismatch": 53.2
+        }
+      },
+      {
+        "arm": "rich+domain",
+        "model": "qwen3:8b",
+        "repeat": 1,
+        "auroc": 50.7,
+        "selected": [
+          "local_affinity",
+          "homophily_violation",
+          "community",
+          "attr_struct_mismatch"
+        ],
+        "lead": "local_affinity",
+        "mode": "aom",
+        "per_view": {
+          "local_affinity": 59.9,
+          "homophily_violation": 32.0,
+          "community": 52.2,
+          "attr_struct_mismatch": 53.2
+        }
+      },
+      {
+        "arm": "rich+domain",
+        "model": "qwen3:8b",
+        "repeat": 2,
+        "auroc": 50.7,
+        "selected": [
+          "local_affinity",
+          "homophily_violation",
+          "community",
+          "attr_struct_mismatch"
+        ],
+        "lead": "local_affinity",
+        "mode": "aom",
+        "per_view": {
+          "local_affinity": 59.9,
+          "homophily_violation": 32.0,
+          "community": 52.2,
+          "attr_struct_mismatch": 53.2
+        }
+      }
+    ]
+  }
+}

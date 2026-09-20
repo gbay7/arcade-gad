@@ -1,0 +1,271 @@
+{
+  "dataset": "amazon_fraud",
+  "n_nodes": 11944,
+  "anomaly_rate": 6.9,
+  "single_view": {
+    "one_class": [
+      64.4,
+      10.9
+    ],
+    "local_affinity": [
+      59.9,
+      11.2
+    ],
+    "density": [
+      54.6,
+      7.5
+    ],
+    "contrastive": [
+      54.6,
+      8.1
+    ],
+    "attr_struct_mismatch": [
+      53.2,
+      7.0
+    ],
+    "community": [
+      52.2,
+      6.6
+    ],
+    "adversarial": [
+      33.2,
+      5.2
+    ],
+    "spectral": [
+      33.1,
+      4.7
+    ],
+    "homophily_violation": [
+      32.0,
+      4.7
+    ],
+    "reconstruction": [
+      26.7,
+      4.4
+    ]
+  },
+  "decisions": [
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "repeat": 0,
+      "selected": [
+        "attr_struct_mismatch",
+        "local_affinity",
+        "homophily_violation",
+        "spectral"
+      ],
+      "executed_auroc": 48.9,
+      "per_view": {
+        "attr_struct_mismatch": 53.2,
+        "local_affinity": 59.9,
+        "homophily_violation": 32.0,
+        "spectral": 33.1
+      },
+      "best_selected": "local_affinity",
+      "best_selected_auroc": 59.9
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "repeat": 1,
+      "selected": [
+        "attr_struct_mismatch",
+        "local_affinity",
+        "homophily_violation",
+        "spectral"
+      ],
+      "executed_auroc": 48.9,
+      "per_view": {
+        "attr_struct_mismatch": 53.2,
+        "local_affinity": 59.9,
+        "homophily_violation": 32.0,
+        "spectral": 33.1
+      },
+      "best_selected": "local_affinity",
+      "best_selected_auroc": 59.9
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "repeat": 2,
+      "selected": [
+        "attr_struct_mismatch",
+        "local_affinity",
+        "homophily_violation",
+        "spectral"
+      ],
+      "executed_auroc": 48.9,
+      "per_view": {
+        "attr_struct_mismatch": 53.2,
+        "local_affinity": 59.9,
+        "homophily_violation": 32.0,
+        "spectral": 33.1
+      },
+      "best_selected": "local_affinity",
+      "best_selected_auroc": 59.9
+    },
+    {
+      "pack": "domain",
+      "model": "claude:haiku",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "attr_struct_mismatch",
+        "spectral"
+      ],
+      "executed_auroc": 53.7,
+      "per_view": {
+        "local_affinity": 59.9,
+        "attr_struct_mismatch": 53.2,
+        "spectral": 33.1
+      },
+      "best_selected": "local_affinity",
+      "best_selected_auroc": 59.9
+    },
+    {
+      "pack": "domain",
+      "model": "claude:haiku",
+      "repeat": 1,
+      "selected": [
+        "attr_struct_mismatch",
+        "local_affinity"
+      ],
+      "executed_auroc": 60.2,
+      "per_view": {
+        "attr_struct_mismatch": 53.2,
+        "local_affinity": 59.9
+      },
+      "best_selected": "local_affinity",
+      "best_selected_auroc": 59.9
+    },
+    {
+      "pack": "domain",
+      "model": "claude:haiku",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "attr_struct_mismatch",
+        "spectral"
+      ],
+      "executed_auroc": 53.7,
+      "per_view": {
+        "local_affinity": 59.9,
+        "attr_struct_mismatch": 53.2,
+        "spectral": 33.1
+      },
+      "best_selected": "local_affinity",
+      "best_selected_auroc": 59.9
+    },
+    {
+      "pack": "domain",
+      "model": "claude:opus",
+      "repeat": 0,
+      "selected": [
+        "attr_struct_mismatch",
+        "one_class",
+        "reconstruction"
+      ],
+      "executed_auroc": 49.4,
+      "per_view": {
+        "attr_struct_mismatch": 53.2,
+        "one_class": 64.4,
+        "reconstruction": 26.7
+      },
+      "best_selected": "one_class",
+      "best_selected_auroc": 64.4
+    },
+    {
+      "pack": "domain",
+      "model": "claude:opus",
+      "repeat": 1,
+      "selected": [
+        "one_class",
+        "attr_struct_mismatch",
+        "density"
+      ],
+      "executed_auroc": 60.9,
+      "per_view": {
+        "one_class": 64.4,
+        "attr_struct_mismatch": 53.2,
+        "density": 54.6
+      },
+      "best_selected": "one_class",
+      "best_selected_auroc": 64.4
+    },
+    {
+      "pack": "domain",
+      "model": "claude:opus",
+      "repeat": 2,
+      "selected": [
+        "one_class",
+        "attr_struct_mismatch",
+        "density",
+        "reconstruction"
+      ],
+      "executed_auroc": 50.1,
+      "per_view": {
+        "one_class": 64.4,
+        "attr_struct_mismatch": 53.2,
+        "density": 54.6,
+        "reconstruction": 26.7
+      },
+      "best_selected": "one_class",
+      "best_selected_auroc": 64.4
+    },
+    {
+      "pack": "domain",
+      "model": "qwen3:8b",
+      "repeat": 0,
+      "selected": [
+        "contrastive",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "executed_auroc": 46.3,
+      "per_view": {
+        "contrastive": 54.6,
+        "homophily_violation": 32.0,
+        "attr_struct_mismatch": 53.2
+      },
+      "best_selected": "contrastive",
+      "best_selected_auroc": 54.6
+    },
+    {
+      "pack": "domain",
+      "model": "qwen3:8b",
+      "repeat": 1,
+      "selected": [
+        "contrastive",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "executed_auroc": 46.3,
+      "per_view": {
+        "contrastive": 54.6,
+        "homophily_violation": 32.0,
+        "attr_struct_mismatch": 53.2
+      },
+      "best_selected": "contrastive",
+      "best_selected_auroc": 54.6
+    },
+    {
+      "pack": "domain",
+      "model": "qwen3:8b",
+      "repeat": 2,
+      "selected": [
+        "contrastive",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "executed_auroc": 46.3,
+      "per_view": {
+        "contrastive": 54.6,
+        "homophily_violation": 32.0,
+        "attr_struct_mismatch": 53.2
+      },
+      "best_selected": "contrastive",
+      "best_selected_auroc": 54.6
+    }
+  ]
+}

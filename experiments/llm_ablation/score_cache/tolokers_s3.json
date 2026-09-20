@@ -1,0 +1,43 @@
+{
+  "dataset": "tolokers",
+  "seed": 3,
+  "applicable": [
+    "reconstruction",
+    "local_affinity",
+    "contrastive",
+    "adversarial",
+    "one_class",
+    "density",
+    "community",
+    "homophily_violation",
+    "spectral",
+    "attr_struct_mismatch",
+    "conformity"
+  ],
+  "cached": [
+    "adversarial",
+    "attr_struct_mismatch",
+    "community",
+    "conformity",
+    "contrastive",
+    "density",
+    "homophily_violation",
+    "local_affinity",
+    "one_class",
+    "reconstruction",
+    "spectral"
+  ],
+  "timings_s": {
+    "reconstruction": 19.6,
+    "local_affinity": 0.0,
+    "contrastive": 64.5,
+    "adversarial": 34.4,
+    "one_class": 51.3,
+    "density": 0.6,
+    "community": 0.0,
+    "homophily_violation": 0.0,
+    "spectral": 0.0,
+    "attr_struct_mismatch": 0.5,
+    "conformity": 0.0
+  }
+}

@@ -1,0 +1,446 @@
+{
+  "datasets": {
+    "enron": {
+      "n_applicable": 11,
+      "n_subsets": 561,
+      "random_uniform_1to4": 48.4,
+      "random3": 49.2,
+      "random_by_k": {
+        "1": 44.9,
+        "2": 46.5,
+        "3": 49.2,
+        "4": 53.0
+      },
+      "max_draw": {
+        "auroc": 83.7,
+        "selected": [
+          "conformity"
+        ]
+      },
+      "min_draw": 14.5,
+      "all_applicable": 83.7,
+      "closed_form": 83.7,
+      "closed_form_sel": [
+        "conformity"
+      ],
+      "tailsep_top1": {
+        "auroc": 26.4,
+        "selected": [
+          "reconstruction"
+        ]
+      },
+      "tailsep_top3": {
+        "auroc": 43.8,
+        "selected": [
+          "reconstruction",
+          "homophily_violation",
+          "one_class"
+        ]
+      },
+      "qwen3_8b": 83.7,
+      "p_random_draw_ge_qwen": 0.227
+    },
+    "books": {
+      "n_applicable": 11,
+      "n_subsets": 561,
+      "random_uniform_1to4": 48.7,
+      "random3": 49.0,
+      "random_by_k": {
+        "1": 46.9,
+        "2": 47.4,
+        "3": 49.0,
+        "4": 51.4
+      },
+      "max_draw": {
+        "auroc": 72.1,
+        "selected": [
+          "attribute_inflation"
+        ]
+      },
+      "min_draw": 29.2,
+      "all_applicable": 72.1,
+      "closed_form": 72.1,
+      "closed_form_sel": [
+        "attribute_inflation"
+      ],
+      "tailsep_top1": {
+        "auroc": 48.7,
+        "selected": [
+          "local_affinity"
+        ]
+      },
+      "tailsep_top3": {
+        "auroc": 42.7,
+        "selected": [
+          "local_affinity",
+          "density",
+          "spectral"
+        ]
+      },
+      "qwen3_8b": 72.1,
+      "p_random_draw_ge_qwen": 0.227
+    },
+    "disney": {
+      "n_applicable": 10,
+      "n_subsets": 385,
+      "random_uniform_1to4": 60.2,
+      "random3": 62.3,
+      "random_by_k": {
+        "1": 54.8,
+        "2": 59.1,
+        "3": 62.3,
+        "4": 64.5
+      },
+      "max_draw": {
+        "auroc": 86.4,
+        "selected": [
+          "peripheral_mismatch"
+        ]
+      },
+      "min_draw": 33.3,
+      "all_applicable": 86.4,
+      "closed_form": 86.4,
+      "closed_form_sel": [
+        "peripheral_mismatch"
+      ],
+      "tailsep_top1": {
+        "auroc": 60.3,
+        "selected": [
+          "one_class"
+        ]
+      },
+      "tailsep_top3": {
+        "auroc": 48.2,
+        "selected": [
+          "one_class",
+          "reconstruction",
+          "density"
+        ]
+      },
+      "qwen3_8b": 86.4,
+      "p_random_draw_ge_qwen": 0.25
+    },
+    "weibo": {
+      "n_applicable": 12,
+      "n_subsets": 793,
+      "random_uniform_1to4": 74.8,
+      "random3": 77.9,
+      "random_by_k": {
+        "1": 66.2,
+        "2": 70.8,
+        "3": 77.9,
+        "4": 84.1
+      },
+      "max_draw": {
+        "auroc": 94.9,
+        "selected": [
+          "linear_residual"
+        ]
+      },
+      "min_draw": 25.7,
+      "all_applicable": 94.9,
+      "closed_form": 94.9,
+      "closed_form_sel": [
+        "linear_residual"
+      ],
+      "tailsep_top1": {
+        "auroc": 89.3,
+        "selected": [
+          "subgraph_contrast"
+        ]
+      },
+      "tailsep_top3": {
+        "auroc": 88.6,
+        "selected": [
+          "subgraph_contrast",
+          "homophily_violation",
+          "one_class"
+        ]
+      },
+      "qwen3_8b": 94.9,
+      "p_random_draw_ge_qwen": 0.208
+    },
+    "inj_amazon": {
+      "n_applicable": 11,
+      "n_subsets": 561,
+      "random_uniform_1to4": 67.3,
+      "random3": 69.0,
+      "random_by_k": {
+        "1": 63.2,
+        "2": 65.8,
+        "3": 69.0,
+        "4": 71.2
+      },
+      "max_draw": {
+        "auroc": 93.8,
+        "selected": [
+          "subgraph_contrast"
+        ]
+      },
+      "min_draw": 32.2,
+      "all_applicable": 73.3,
+      "closed_form": null,
+      "closed_form_sel": [],
+      "tailsep_top1": {
+        "auroc": 74.8,
+        "selected": [
+          "spectral"
+        ]
+      },
+      "tailsep_top3": {
+        "auroc": 68.3,
+        "selected": [
+          "spectral",
+          "reconstruction",
+          "contrastive"
+        ]
+      },
+      "qwen3_8b": 86.0,
+      "p_random_draw_ge_qwen": 0.077
+    },
+    "acm": {
+      "n_applicable": 12,
+      "n_subsets": 793,
+      "random_uniform_1to4": 73.4,
+      "random3": 76.6,
+      "random_by_k": {
+        "1": 65.7,
+        "2": 70.0,
+        "3": 76.6,
+        "4": 81.4
+      },
+      "max_draw": {
+        "auroc": 98.9,
+        "selected": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      },
+      "min_draw": 27.0,
+      "all_applicable": 98.9,
+      "closed_form": 73.6,
+      "closed_form_sel": [
+        "clique_density"
+      ],
+      "tailsep_top1": {
+        "auroc": 61.0,
+        "selected": [
+          "attr_struct_mismatch"
+        ]
+      },
+      "tailsep_top3": {
+        "auroc": 72.0,
+        "selected": [
+          "attr_struct_mismatch",
+          "clique_density",
+          "contrastive"
+        ]
+      },
+      "qwen3_8b": 98.9,
+      "p_random_draw_ge_qwen": 0.038
+    },
+    "blogcatalog": {
+      "n_applicable": 12,
+      "n_subsets": 793,
+      "random_uniform_1to4": 65.1,
+      "random3": 67.0,
+      "random_by_k": {
+        "1": 60.6,
+        "2": 63.1,
+        "3": 67.0,
+        "4": 69.7
+      },
+      "max_draw": {
+        "auroc": 81.4,
+        "selected": [
+          "clique_density",
+          "community",
+          "spectral"
+        ]
+      },
+      "min_draw": 40.5,
+      "all_applicable": 78.9,
+      "closed_form": 60.6,
+      "closed_form_sel": [
+        "clique_density"
+      ],
+      "tailsep_top1": {
+        "auroc": 60.6,
+        "selected": [
+          "clique_density"
+        ]
+      },
+      "tailsep_top3": {
+        "auroc": 60.6,
+        "selected": [
+          "clique_density",
+          "community",
+          "homophily_violation"
+        ]
+      },
+      "qwen3_8b": 73.1,
+      "p_random_draw_ge_qwen": 0.347
+    },
+    "cola_flickr": {
+      "n_applicable": 12,
+      "n_subsets": 793,
+      "random_uniform_1to4": 64.0,
+      "random3": 65.7,
+      "random_by_k": {
+        "1": 59.9,
+        "2": 62.2,
+        "3": 65.7,
+        "4": 68.1
+      },
+      "max_draw": {
+        "auroc": 78.3,
+        "selected": [
+          "subgraph_contrast"
+        ]
+      },
+      "min_draw": 35.5,
+      "all_applicable": 76.5,
+      "closed_form": 59.9,
+      "closed_form_sel": [
+        "clique_density"
+      ],
+      "tailsep_top1": {
+        "auroc": 72.3,
+        "selected": [
+          "homophily_violation"
+        ]
+      },
+      "tailsep_top3": {
+        "auroc": 76.0,
+        "selected": [
+          "homophily_violation",
+          "community",
+          "clique_density"
+        ]
+      },
+      "qwen3_8b": 76.5,
+      "p_random_draw_ge_qwen": 0.078
+    }
+  },
+  "llm_reference": {
+    "gemma4:e2b": {
+      "enron": 30.7,
+      "inj_amazon": 80.0,
+      "books": 33.8,
+      "disney": 86.4,
+      "weibo": 75.8,
+      "blogcatalog": 78.9,
+      "acm": 88.7,
+      "cola_flickr": 76.5
+    },
+    "gemma4:12b": {
+      "enron": 83.7,
+      "inj_amazon": 85.8,
+      "books": 32.3,
+      "disney": 86.4,
+      "weibo": 94.9,
+      "blogcatalog": 78.9,
+      "acm": 98.9,
+      "cola_flickr": 76.5
+    },
+    "qwen3:4b": {
+      "enron": 36.4,
+      "inj_amazon": 85.9,
+      "books": 33.3,
+      "disney": 49.6,
+      "weibo": 94.9,
+      "blogcatalog": 75.2,
+      "acm": 88.7,
+      "cola_flickr": 74.7
+    },
+    "llama3.1:8b": {
+      "enron": 25.8,
+      "inj_amazon": 84.5,
+      "books": 29.2,
+      "disney": 86.4,
+      "weibo": 66.2,
+      "blogcatalog": 75.6,
+      "acm": 86.2,
+      "cola_flickr": 72.6
+    },
+    "phi4:14b": {
+      "enron": 83.7,
+      "inj_amazon": 86.0,
+      "books": 72.1,
+      "disney": 46.0,
+      "weibo": 57.8,
+      "blogcatalog": 49.4,
+      "acm": 89.5,
+      "cola_flickr": 74.1
+    },
+    "qwen3:8b": {
+      "enron": 83.7,
+      "inj_amazon": 86.0,
+      "books": 72.1,
+      "disney": 86.4,
+      "weibo": 94.9,
+      "blogcatalog": 73.1,
+      "acm": 98.9,
+      "cola_flickr": 76.5
+    },
+    "claude:sonnet": {
+      "enron": 24.1,
+      "inj_amazon": 79.4,
+      "books": 46.3,
+      "disney": 65.6,
+      "weibo": 94.9,
+      "blogcatalog": 78.7,
+      "acm": 93.6,
+      "cola_flickr": 75.0
+    },
+    "claude:haiku": {
+      "enron": 45.0,
+      "inj_amazon": 91.1,
+      "books": 72.1,
+      "disney": 86.4,
+      "weibo": 92.7,
+      "blogcatalog": 69.1,
+      "acm": 98.9,
+      "cola_flickr": 75.3
+    },
+    "claude:opus": {
+      "enron": 37.3,
+      "inj_amazon": 84.9,
+      "books": 46.4,
+      "disney": 86.4,
+      "weibo": 92.0,
+      "blogcatalog": 78.9,
+      "acm": 98.9,
+      "cola_flickr": 76.5
+    },
+    "opencode:opencode/deepseek-v4-flash-free": {
+      "enron": 47.6,
+      "inj_amazon": 86.0,
+      "books": 33.2,
+      "disney": 86.4,
+      "weibo": 94.9,
+      "blogcatalog": 76.0,
+      "acm": 93.3,
+      "cola_flickr": 75.8
+    }
+  },
+  "best_fixed3_hindsight": {
+    "selected": [
+      "conformity",
+      "peripheral_mismatch",
+      "subgraph_contrast"
+    ],
+    "mean_auroc": 80.1,
+    "note": "labels used to pick the subset; upper bound for static rules"
+  },
+  "summary": {
+    "E_random_1to4_avg": 62.7,
+    "E_random3_avg": 64.6,
+    "max_draw_avg": 86.2,
+    "all_applicable_avg": 83.1,
+    "closed_form_avg": 72.7,
+    "tailsep_top1_avg": 61.7,
+    "tailsep_top3_avg": 62.5,
+    "qwen3_8b_avg": 84.0
+  }
+}

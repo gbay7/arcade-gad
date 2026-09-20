@@ -1,0 +1,551 @@
+[A] Enron|DOMINANT         auroc=55.6+-1.2 ap=0.1+-0.0 (175s)
+[A] Enron|AnomalyDAE       auroc=48.6+-11.4 ap=0.0+-0.0 (176s)  DRIFT vs stored 48.4 (|d|=0.2)
+[A] Enron|DONE             auroc=41.0+-0.9 ap=0.1+-0.0 (173s)
+[A] Enron|CoLA             auroc=55.2+-4.1 ap=0.1+-0.1 (19s)  DRIFT vs stored 56.3 (|d|=1.1)
+[A] Enron|GAAN             auroc=49.2+-8.8 ap=0.0+-0.0 (637s)
+[A] Enron|OCGNN            auroc=57.0+-2.5 ap=0.1+-0.0 (13s)  DRIFT vs stored 57.6 (|d|=0.6)
+[A] Reddit|DOMINANT        auroc=56.1+-0.0 ap=3.7+-0.0 (123s)
+[A] Reddit|AnomalyDAE      auroc=49.6+-1.7 ap=3.2+-0.1 (121s)  DRIFT vs stored 49.0 (|d|=0.6)
+[A] Reddit|DONE            auroc=53.3+-2.3 ap=3.8+-0.2 (125s)
+[A] Reddit|CoLA            auroc=54.1+-2.8 ap=4.1+-0.4 (18s)  DRIFT vs stored 53.9 (|d|=0.2)
+[A] Reddit|GAAN            auroc=49.3+-0.7 ap=3.4+-0.2 (430s)
+[A] Reddit|OCGNN           auroc=42.8+-4.4 ap=3.1+-0.6 (13s)  DRIFT vs stored 50.6 (|d|=7.8)
+[A] Books|DOMINANT         auroc=47.6+-2.2 ap=1.8+-0.1 (9s)
+[A] Books|AnomalyDAE       auroc=41.5+-0.7 ap=1.7+-0.0 (7s)  DRIFT vs stored 41.9 (|d|=0.4)
+[A] Books|DONE             auroc=37.2+-2.1 ap=1.8+-0.7 (10s)  DRIFT vs stored 37.6 (|d|=0.4)
+[A] Books|CoLA             auroc=50.9+-5.7 ap=2.3+-0.7 (7s)
+[A] Books|GAAN             auroc=50.3+-4.5 ap=2.1+-0.2 (12s)
+[A] Books|OCGNN            auroc=50.9+-0.5 ap=2.0+-0.0 (6s)
+[A] Disney|DOMINANT        auroc=59.7+-7.8 ap=7.5+-2.3 (6s)
+[A] Disney|AnomalyDAE      auroc=48.5+-0.1 ap=5.7+-0.0 (5s)
+[A] Disney|DONE            auroc=40.7+-0.9 ap=4.5+-0.1 (6s)
+[A] Disney|CoLA            auroc=45.8+-9.5 ap=5.4+-1.0 (6s)  DRIFT vs stored 50.5 (|d|=4.7)
+[A] Disney|GAAN            auroc=48.0+-0.0 ap=5.6+-0.0 (5s)
+[A] Disney|OCGNN           auroc=66.9+-0.6 ap=7.8+-0.1 (5s)
+[A] Weibo|DOMINANT         auroc=90.0+-0.5 ap=25.5+-0.7 (131s)
+[A] Weibo|AnomalyDAE       auroc=87.5+-1.0 ap=29.9+-0.9 (84s)
+[A] Weibo|DONE             auroc=85.2+-0.2 ap=29.8+-0.2 (92s)
+[A] Weibo|CoLA             auroc=23.3+-1.9 ap=2.9+-0.2 (36s)  DRIFT vs stored 24.0 (|d|=0.7)
+[A] Weibo|GAAN             auroc=89.9+-0.0 ap=32.2+-0.0 (536s)
+[A] Weibo|OCGNN            auroc=21.7+-2.6 ap=2.7+-0.2 (21s)
+[A] Amazon|DOMINANT        auroc=71.8+-0.0 ap=12.2+-0.0 (289s)
+[A] Amazon|AnomalyDAE      auroc=75.1+-0.0 ap=35.2+-0.1 (197s)
+[A] Amazon|DONE            auroc=85.3+-1.3 ap=22.5+-4.0 (205s)  DRIFT vs stored 84.8 (|d|=0.5)
+[A] Amazon|CoLA            auroc=60.6+-1.4 ap=10.3+-0.7 (48s)  DRIFT vs stored 60.9 (|d|=0.3)
+[A] Amazon|GAAN            FAILED (4s)
+[A] Amazon|OCGNN           auroc=50.1+-0.0 ap=5.2+-0.1 (29s)
+[A] Cora|DOMINANT          auroc=76.6+-0.4 ap=18.3+-0.7 (20s)
+[A] Cora|AnomalyDAE        auroc=71.4+-0.2 ap=14.0+-0.3 (16s)
+[A] Cora|DONE              auroc=84.8+-0.4 ap=32.3+-1.2 (18s)  DRIFT vs stored 84.3 (|d|=0.5)
+[A] Cora|CoLA              auroc=55.0+-2.7 ap=6.0+-0.8 (11s)
+[A] Cora|GAAN              FAILED (3s)
+[A] Cora|OCGNN             auroc=50.0+-0.0 ap=5.1+-0.0 (9s)
+[B] BlogCatalog|CoLA       auroc=49.4+-3.2 ap=7.0+-0.8 (28s)
+[B] ACM|CoLA               auroc=46.5+-1.6 ap=3.7+-0.2 (63s)
+[B] Flickr|CoLA            auroc=49.1+-2.0 ap=6.9+-0.7 (52s)  DRIFT vs stored 47.9 (|d|=1.2)
+  epoch    0  loss 0.71687
+  epoch   20  loss 0.70513
+  epoch   40  loss 0.70510
+  epoch   60  loss 0.70509
+  epoch   80  loss 0.70509
+  epoch   99  loss 0.70511
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.71784
+  epoch   20  loss 0.70512
+  epoch   40  loss 0.70512
+  epoch   60  loss 0.70510
+  epoch   80  loss 0.70506
+  epoch   99  loss 0.70511
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.71848
+  epoch   20  loss 0.70509
+  epoch   40  loss 0.70506
+  epoch   60  loss 0.70504
+  epoch   80  loss 0.70507
+  epoch   99  loss 0.70507
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.71797
+  epoch   20  loss 0.70511
+  epoch   40  loss 0.70511
+  epoch   60  loss 0.70509
+  epoch   80  loss 0.70510
+  epoch   99  loss 0.70507
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.71828
+  epoch   20  loss 0.70510
+  epoch   40  loss 0.70506
+  epoch   60  loss 0.70501
+  epoch   80  loss 0.70510
+  epoch   99  loss 0.70507
+  test round 0
+  test round 50
+  test round 100
+[C] Enron|SL-GAD           auroc=53.1+-3.2 ap=0.0+-0.0 (2723s)
+  epoch    0  loss 0.69317
+  epoch   20  loss 0.62210
+  epoch   40  loss 0.57025
+  epoch   60  loss 0.54755
+  epoch   80  loss 0.54198
+  epoch   99  loss 0.53879
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.69317
+  epoch   20  loss 0.61753
+  epoch   40  loss 0.57664
+  epoch   60  loss 0.55662
+  epoch   80  loss 0.54850
+  epoch   99  loss 0.54203
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.69317
+  epoch   20  loss 0.61367
+  epoch   40  loss 0.56686
+  epoch   60  loss 0.55214
+  epoch   80  loss 0.53914
+  epoch   99  loss 0.53027
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.69317
+  epoch   20  loss 0.61623
+  epoch   40  loss 0.58691
+  epoch   60  loss 0.56580
+  epoch   80  loss 0.55695
+  epoch   99  loss 0.54954
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.69317
+  epoch   20  loss 0.60119
+  epoch   40  loss 0.56491
+  epoch   60  loss 0.55066
+  epoch   80  loss 0.53466
+  epoch   99  loss 0.52287
+  test round 0
+  test round 50
+  test round 100
+[C] Reddit|SL-GAD          auroc=53.7+-1.5 ap=3.4+-0.1 (2439s)
+  epoch    0  loss 1120724316.16361
+  epoch   20  loss 285612043.28350
+  epoch   40  loss 286292448.42877
+  epoch   60  loss 284931711.90973
+  epoch   80  loss 290291311.27786
+  epoch   99  loss 284741330.07616
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 1232608157.24683
+  epoch   20  loss 287854417.78279
+  epoch   40  loss 285999882.38082
+  epoch   60  loss 286871417.32017
+  epoch   80  loss 288557811.45275
+  epoch   99  loss 294651800.77856
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 1227954162.45980
+  epoch   20  loss 291478678.95063
+  epoch   40  loss 288805175.96615
+  epoch   60  loss 288587653.43865
+  epoch   80  loss 285921148.16361
+  epoch   99  loss 284572294.00282
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 1345478934.02539
+  epoch   20  loss 291111381.79972
+  epoch   40  loss 293911945.54584
+  epoch   60  loss 292614351.52609
+  epoch   80  loss 285149048.82370
+  epoch   99  loss 287926089.59097
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 1697244472.32722
+  epoch   20  loss 288709207.98872
+  epoch   40  loss 292630399.77433
+  epoch   60  loss 288534410.53879
+  epoch   80  loss 287267852.59238
+  epoch   99  loss 285627919.02962
+  test round 0
+  test round 50
+  test round 100
+[C] Books|SL-GAD           auroc=53.6+-3.8 ap=3.1+-0.6 (223s)
+  epoch    0  loss 5371262.50000
+  epoch   20  loss 4039695.50000
+  epoch   40  loss 3696707.00000
+  epoch   60  loss 3665088.25000
+  epoch   80  loss 3563086.50000
+  epoch   99  loss 3554723.00000
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 5414306.00000
+  epoch   20  loss 4500254.00000
+  epoch   40  loss 3806755.50000
+  epoch   60  loss 3507805.50000
+  epoch   80  loss 3416975.00000
+  epoch   99  loss 3446093.50000
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 5095186.50000
+  epoch   20  loss 3987714.25000
+  epoch   40  loss 3683605.25000
+  epoch   60  loss 3594535.50000
+  epoch   80  loss 3441898.50000
+  epoch   99  loss 3490790.75000
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 6102268.50000
+  epoch   20  loss 4400978.50000
+  epoch   40  loss 3743144.75000
+  epoch   60  loss 3562327.00000
+  epoch   80  loss 3569927.00000
+  epoch   99  loss 3527042.00000
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 4946768.00000
+  epoch   20  loss 3917062.50000
+  epoch   40  loss 3479493.50000
+  epoch   60  loss 3575225.00000
+  epoch   80  loss 3468007.25000
+  epoch   99  loss 3373139.75000
+  test round 0
+  test round 50
+  test round 100
+[C] Disney|SL-GAD          auroc=58.9+-3.5 ap=6.8+-0.3 (20s)
+  epoch    0  loss 35.92625
+  epoch   20  loss 19.85359
+  epoch   40  loss 19.71596
+  epoch   60  loss 19.38349
+  epoch   80  loss 19.18049
+  epoch   99  loss 19.81633
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 36.00147
+  epoch   20  loss 19.74087
+  epoch   40  loss 19.76275
+  epoch   60  loss 19.65911
+  epoch   80  loss 19.56493
+  epoch   99  loss 19.82496
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 35.83754
+  epoch   20  loss 19.43995
+  epoch   40  loss 19.56594
+  epoch   60  loss 19.65526
+  epoch   80  loss 19.75528
+  epoch   99  loss 19.89415
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 35.70919
+  epoch   20  loss 20.06468
+  epoch   40  loss 19.58823
+  epoch   60  loss 19.70697
+  epoch   80  loss 19.48295
+  epoch   99  loss 19.47644
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 35.79069
+  epoch   20  loss 19.55415
+  epoch   40  loss 19.58274
+  epoch   60  loss 19.78200
+  epoch   80  loss 19.55324
+  epoch   99  loss 19.53669
+  test round 0
+  test round 50
+  test round 100
+[C] Weibo|SL-GAD           auroc=49.9+-1.3 ap=14.1+-0.7 (1331s)
+  epoch    0  loss 0.69315
+  epoch   20  loss 0.53715
+  epoch   40  loss 0.48938
+  epoch   60  loss 0.46819
+  epoch   80  loss 0.46086
+  epoch   99  loss 0.44813
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.69315
+  epoch   20  loss 0.57048
+  epoch   40  loss 0.54460
+  epoch   60  loss 0.52147
+  epoch   80  loss 0.50772
+  epoch   99  loss 0.48263
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.69315
+  epoch   20  loss 0.58045
+  epoch   40  loss 0.55480
+  epoch   60  loss 0.54445
+  epoch   80  loss 0.52470
+  epoch   99  loss 0.51391
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.69315
+  epoch   20  loss 0.57720
+  epoch   40  loss 0.54835
+  epoch   60  loss 0.53632
+  epoch   80  loss 0.51289
+  epoch   99  loss 0.48877
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.69315
+  epoch   20  loss 0.56933
+  epoch   40  loss 0.53875
+  epoch   60  loss 0.50610
+  epoch   80  loss 0.47527
+  epoch   99  loss 0.45048
+  test round 0
+  test round 50
+  test round 100
+[C] Amazon|SL-GAD          auroc=92.9+-1.1 ap=55.4+-3.2 (2191s)
+  epoch    0  loss 0.69318
+  epoch   20  loss 0.56886
+  epoch   40  loss 0.51422
+  epoch   60  loss 0.47892
+  epoch   80  loss 0.44095
+  epoch   99  loss 0.41074
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.69318
+  epoch   20  loss 0.57822
+  epoch   40  loss 0.53729
+  epoch   60  loss 0.50505
+  epoch   80  loss 0.47785
+  epoch   99  loss 0.45264
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.69318
+  epoch   20  loss 0.59530
+  epoch   40  loss 0.54244
+  epoch   60  loss 0.49415
+  epoch   80  loss 0.46232
+  epoch   99  loss 0.44500
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.69318
+  epoch   20  loss 0.60840
+  epoch   40  loss 0.56947
+  epoch   60  loss 0.52924
+  epoch   80  loss 0.49952
+  epoch   99  loss 0.47992
+  test round 0
+  test round 50
+  test round 100
+  epoch    0  loss 0.69318
+  epoch   20  loss 0.59823
+  epoch   40  loss 0.56606
+  epoch   60  loss 0.51754
+  epoch   80  loss 0.49819
+  epoch   99  loss 0.46667
+  test round 0
+  test round 50
+  test round 100
+[C] Cora|SL-GAD            auroc=86.4+-1.4 ap=26.9+-3.0 (450s)
+  epoch    0  loss 0.69330
+  epoch   20  loss 0.63612
+  epoch   40  loss 0.61475
+  epoch   60  loss 0.59327
+  epoch   80  loss 0.58284
+  epoch   99  loss 0.57940
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+  epoch    0  loss 0.69330
+  epoch   20  loss 0.64199
+  epoch   40  loss 0.61687
+  epoch   60  loss 0.59295
+  epoch   80  loss 0.58330
+  epoch   99  loss 0.58281
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+  epoch    0  loss 0.69330
+  epoch   20  loss 0.63440
+  epoch   40  loss 0.61598
+  epoch   60  loss 0.59399
+  epoch   80  loss 0.58262
+  epoch   99  loss 0.57473
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+  epoch    0  loss 0.69330
+  epoch   20  loss 0.63505
+  epoch   40  loss 0.61693
+  epoch   60  loss 0.59414
+  epoch   80  loss 0.58520
+  epoch   99  loss 0.57161
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+  epoch    0  loss 0.69330
+  epoch   20  loss 0.64356
+  epoch   40  loss 0.61912
+  epoch   60  loss 0.60079
+  epoch   80  loss 0.58391
+  epoch   99  loss 0.57691
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+[C] BlogCatalog|SL-GAD     auroc=77.4+-0.2 ap=39.3+-0.1 (1679s)
+  epoch    0  loss 0.69318
+  epoch   20  loss 0.46017
+  epoch   40  loss 0.41687
+  epoch   60  loss 0.39801
+  epoch   80  loss 0.37365
+  epoch   99  loss 0.34637
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+  epoch    0  loss 0.69318
+  epoch   20  loss 0.37909
+  epoch   40  loss 0.31863
+  epoch   60  loss 0.29412
+  epoch   80  loss 0.27869
+  epoch   99  loss 0.26573
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+  epoch    0  loss 0.69318
+  epoch   20  loss 0.43069
+  epoch   40  loss 0.36845
+  epoch   60  loss 0.31918
+  epoch   80  loss 0.28593
+  epoch   99  loss 0.26348
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+  epoch    0  loss 0.69318
+  epoch   20  loss 0.46111
+  epoch   40  loss 0.33903
+  epoch   60  loss 0.28489
+  epoch   80  loss 0.26225
+  epoch   99  loss 0.24327
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+  epoch    0  loss 0.69317
+  epoch   20  loss 0.45990
+  epoch   40  loss 0.40604
+  epoch   60  loss 0.37817
+  epoch   80  loss 0.33944
+  epoch   99  loss 0.28965
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+[C] ACM|SL-GAD             auroc=80.6+-0.8 ap=39.9+-1.7 (5390s)
+  epoch    0  loss 0.69326
+  epoch   20  loss 0.62660
+  epoch   40  loss 0.60646
+  epoch   60  loss 0.59320
+  epoch   80  loss 0.58301
+  epoch   99  loss 0.57430
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+  epoch    0  loss 0.69326
+  epoch   20  loss 0.62422
+  epoch   40  loss 0.60396
+  epoch   60  loss 0.58690
+  epoch   80  loss 0.58481
+  epoch   99  loss 0.57424
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+  epoch    0  loss 0.69326
+  epoch   20  loss 0.62021
+  epoch   40  loss 0.59765
+  epoch   60  loss 0.58928
+  epoch   80  loss 0.58118
+  epoch   99  loss 0.56754
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+  epoch    0  loss 0.69326
+  epoch   20  loss 0.62415
+  epoch   40  loss 0.60341
+  epoch   60  loss 0.58883
+  epoch   80  loss 0.57986
+  epoch   99  loss 0.57437
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+  epoch    0  loss 0.69326
+  epoch   20  loss 0.62038
+  epoch   40  loss 0.59559
+  epoch   60  loss 0.58273
+  epoch   80  loss 0.57372
+  epoch   99  loss 0.56540
+  test round 0
+  test round 50
+  test round 100
+  test round 150
+  test round 200
+  test round 250
+[C] Flickr|SL-GAD          auroc=78.5+-0.2 ap=42.5+-0.1 (2795s)
+AP_DONE

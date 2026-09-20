@@ -1,0 +1,191 @@
+{
+  "frozen_commit": "ffb3217",
+  "ARCADE": {
+    "mean": 52.3,
+    "std": 0.0,
+    "ap_mean": 22.5,
+    "ap_std": 0.0,
+    "seeds": [
+      {
+        "seed": 1,
+        "auroc": 52.3,
+        "auprc": 22.5,
+        "mode": "select",
+        "trusted": [
+          "conformity"
+        ],
+        "applicable": [
+          "adversarial",
+          "attr_struct_mismatch",
+          "community",
+          "conformity",
+          "contrastive",
+          "density",
+          "homophily_violation",
+          "local_affinity",
+          "one_class",
+          "reconstruction",
+          "spectral"
+        ]
+      },
+      {
+        "seed": 2,
+        "auroc": 52.3,
+        "auprc": 22.5,
+        "mode": "select",
+        "trusted": [
+          "conformity"
+        ],
+        "applicable": [
+          "adversarial",
+          "attr_struct_mismatch",
+          "community",
+          "conformity",
+          "contrastive",
+          "density",
+          "homophily_violation",
+          "local_affinity",
+          "one_class",
+          "reconstruction",
+          "spectral"
+        ]
+      },
+      {
+        "seed": 3,
+        "auroc": 52.3,
+        "auprc": 22.5,
+        "mode": "select",
+        "trusted": [
+          "conformity"
+        ],
+        "applicable": [
+          "adversarial",
+          "attr_struct_mismatch",
+          "community",
+          "conformity",
+          "contrastive",
+          "density",
+          "homophily_violation",
+          "local_affinity",
+          "one_class",
+          "reconstruction",
+          "spectral"
+        ]
+      },
+      {
+        "seed": 4,
+        "auroc": 52.3,
+        "auprc": 22.5,
+        "mode": "select",
+        "trusted": [
+          "conformity"
+        ],
+        "applicable": [
+          "adversarial",
+          "attr_struct_mismatch",
+          "community",
+          "conformity",
+          "contrastive",
+          "density",
+          "homophily_violation",
+          "local_affinity",
+          "one_class",
+          "reconstruction",
+          "spectral"
+        ]
+      },
+      {
+        "seed": 5,
+        "auroc": 52.3,
+        "auprc": 22.5,
+        "mode": "select",
+        "trusted": [
+          "conformity"
+        ],
+        "applicable": [
+          "adversarial",
+          "attr_struct_mismatch",
+          "community",
+          "conformity",
+          "contrastive",
+          "density",
+          "homophily_violation",
+          "local_affinity",
+          "one_class",
+          "reconstruction",
+          "spectral"
+        ]
+      }
+    ]
+  },
+  "per_detector_seed1": {
+    "adversarial": 52.8,
+    "attr_struct_mismatch": 44.6,
+    "community": 43.3,
+    "conformity": 52.3,
+    "contrastive": 48.5,
+    "density": 47.8,
+    "homophily_violation": 39.6,
+    "local_affinity": 39.4,
+    "one_class": 62.7,
+    "reconstruction": 44.7,
+    "spectral": 54.4
+  },
+  "DOMINANT": {
+    "mean": 55.5,
+    "std": 0.0,
+    "ap_mean": 30.2,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "AnomalyDAE": {
+    "mean": 48.5,
+    "std": 6.4,
+    "ap_mean": 20.8,
+    "ap_std": 2.3,
+    "n": 5
+  },
+  "DONE": {
+    "mean": 51.4,
+    "std": 1.2,
+    "ap_mean": 27.9,
+    "ap_std": 0.7,
+    "n": 5
+  },
+  "CoLA": {
+    "mean": 48.1,
+    "std": 0.5,
+    "ap_mean": 21.3,
+    "ap_std": 0.5,
+    "n": 5
+  },
+  "GAAN": {
+    "mean": 50.2,
+    "std": 1.8,
+    "ap_mean": 22.1,
+    "ap_std": 0.8,
+    "n": 5
+  },
+  "OCGNN": {
+    "mean": 37.4,
+    "std": 1.4,
+    "ap_mean": 16.7,
+    "ap_std": 0.3,
+    "n": 5
+  },
+  "Radar": {
+    "mean": 43.1,
+    "std": 0.0,
+    "ap_mean": 19.4,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "SL-GAD": {
+    "mean": 49.7,
+    "std": 0.3,
+    "ap_mean": 20.6,
+    "ap_std": 0.1,
+    "rounds": 128,
+    "n": 5
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "_note": "Domain descriptions shown to the analyst when ABLATION_DOMAIN=1. Each entry paraphrases closely the dataset's own source paper (cited in 'source'); no labels and no statistics are given (statistics come from the profile). Only graphs with an organic, documented anomaly definition have an entry.",
+  "tolokers": {
+    "text": "Crowdsourcing platform (Toloka). The nodes represent tolokers (workers) that have participated in at least one of 13 selected projects. An edge connects two tolokers if they have worked on the same task. Node features are based on the worker's profile information and task performance statistics. The goal is to find which tolokers have been banned in one of the projects.",
+    "source": "Platonov, Kuznedelev, Diskin, Babenko, Prokhorenkova. A critical look at the evaluation of GNNs under heterophily: are we really making progress? ICLR 2023 (Section on the Tolokers dataset; data from Likhobaba et al. 2023)."
+  },
+  "amazon_fraud": {
+    "text": "Online product-review platform (Amazon, product reviews under the Musical Instruments category). Nodes are users. Three relations are merged into one graph: U-P-U connects users reviewing at least one same product; U-S-U connects users having at least one same star rating within one week; U-V-U connects users with top 5% mutual review text similarities (TF-IDF) among all users. Node features are 25 handcrafted per-user features. The task is fraudulent user detection: users with more than 80% helpful votes are benign entities and users with less than 20% helpful votes are fraudulent entities.",
+    "source": "Dou, Liu, Sun, Deng, Peng, Yu. Enhancing Graph Neural Network-based Fraud Detectors against Camouflaged Fraudsters. CIKM 2020 (Section 4.1, Amazon dataset; features from Zhang et al. 2020; reviews from McAuley and Leskovec 2013)."
+  },
+  "enron": {
+    "text": "Corporate e-mail network (Enron). Each e-mail address is a node, and the messages between e-mail addresses represent edges. Each node has 20 attributes describing aggregated information such as the average content length, the average number of recipients, or the time range between two e-mails. The e-mail addresses that have sent spam messages are the outliers.",
+    "source": "Liu et al. BOND: Benchmarking Unsupervised Outlier Node Detection on Static Attributed Graphs. NeurIPS 2022, Appendix A.1 (Enron, from Sanchez et al. 2013)."
+  },
+  "reddit": {
+    "text": "Social media platform (Reddit). A user-subreddit graph built from one month of user posts on subreddits; the 1,000 most active subreddits and the 10,000 most active users are the nodes, and posts are the interactions. The text of each post is converted into a feature vector of LIWC categories, and the features of users and subreddits are the summation of the features of their posts. Each user has a label indicating whether it has been banned by the platform; banned users are the outliers.",
+    "source": "Liu et al. BOND, NeurIPS 2022, Appendix A.1 (Reddit, from Kumar et al. 2019)."
+  },
+  "weibo": {
+    "text": "Microblogging platform (Tencent-Weibo, a Twitter-like platform in China). A user-user graph that connects users who used the same hashtag, built from 8,405 users and 61,964 hashtags. Temporal information was used to label users: a user who made at least five suspicious events is a suspicious user, and a user with no suspicious event is benign; suspicious users are the outliers.",
+    "source": "Liu et al. BOND, NeurIPS 2022, Appendix A.1 (Weibo, from Zhao et al. 2020)."
+  },
+  "disney": {
+    "text": "Movie co-purchase network (Amazon). Nodes are movies, edges are co-purchases, and the attributes include prices, ratings, number of reviews, and similar metadata. The ground-truth outlier labels were assigned manually by high-school students by majority vote.",
+    "source": "Liu et al. BOND, NeurIPS 2022, Appendix A.1 (Disney, from Muller et al. 2013 / Sanchez et al. 2013)."
+  },
+  "books": {
+    "text": "Book co-purchase network (Amazon). Nodes are books, edges are co-purchases, and the attributes are similar to those of the movie co-purchase network (prices, ratings, number of reviews). The ground-truth outlier labels are derived from the amazonfail tag information.",
+    "source": "Liu et al. BOND, NeurIPS 2022, Appendix A.1 (Books, from Sanchez et al. 2013)."
+  }
+}

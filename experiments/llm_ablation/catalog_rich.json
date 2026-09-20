@@ -1,0 +1,153 @@
+{
+  "_provenance": "Every 'computes', 'reference_frame', 'inputs' and 'degenerates_when' line is derived from the implementation in arcade/paradigms/detectors.py and arcade/data/loader.py, not from any labelled result. No dataset is named and no selection is recommended. Written 2026-09-16 after the Tolokers and amazon_fraud held-out failures, so it must be validated on graphs that were not used to write it.",
+  "_stats_legend": {
+    "how_to_read_the_profile": "Each field is a label-free statistic of this graph. Read the definitions literally: several fields do not mean what their name suggests.",
+    "num_nodes": "Number of nodes.",
+    "num_edges": "Number of directed edge entries in the edge list (each undirected edge appears twice).",
+    "density": "num_edges / (n*(n-1)). A value above ~0.01 means neighbourhoods cover a large share of the graph.",
+    "avg_degree": "Mean number of neighbours. Any neighbour-averaged quantity converges to the global mean as this grows, so neighbour-relative views lose resolution on high-degree graphs.",
+    "max_degree": "Largest neighbour count.",
+    "degree_std": "Standard deviation of the degree.",
+    "clustering_coeff": "Average local clustering coefficient (triangle closure). Estimated by sampling above 2M edges.",
+    "num_communities": "Number of communities found by Louvain. Louvain is run WITHOUT a fixed seed, so this and the two fields below vary slightly between runs.",
+    "modularity": "Modularity of that Louvain partition. Below ~0.3 the partition is weak, so community-relative views have little to measure against.",
+    "homophily": "NOT label homophily and NOT feature homophily. It is the fraction of edges whose two endpoints fall in the SAME LOUVAIN COMMUNITY, computed from structure alone. It says nothing about whether neighbours have similar attributes.",
+    "feature_dim": "Number of node attributes.",
+    "feature_sparsity": "Fraction of attribute entries that are exactly zero.",
+    "feature_dup_rate": "Fraction of nodes whose attribute row is byte-identical to at least one other node's row. High values mean template-dominated attributes.",
+    "spectral_gap": "Second-smallest eigenvalue of the UNNORMALISED Laplacian (algebraic connectivity). It scales with degree, so it is comparable across graphs only at similar average degree.",
+    "is_power_law": "Heuristic only: true when degree_std > 2 * avg_degree.",
+    "how_to_read_the_landmarkers": "Each landmarker is the full score vector of one cheap paradigm, min-max normalised to [0,1] and then summarised. Normalisation is per paradigm, so the mean and the quantiles are comparable ACROSS paradigms only as shape, never as strength. A landmarker also cannot tell you the sign of the signal: a mechanism that is present but inverted on this graph produces the same shape as one that is present and correct."
+  },
+  "reconstruction": {
+    "computes": "A two-layer GCN autoencoder (GCN encoder to 64 dims, GCN decoder back to feature width) trained 100 epochs to minimise mean squared error on the node attributes; the score is the per-node reconstruction error.",
+    "reference_frame": "Neighbourhood-smoothed: the decoder aggregates over neighbours, so a node is reconstructed largely from its neighbourhood.",
+    "inputs": "Node attributes and edges.",
+    "degenerates_when": "Neighbourhoods are large or the graph is near-uniform, because every node is then reconstructed from nearly the same smoothed signal and the error ranks nodes by distance from the global attribute mean rather than by anomaly. Also when attributes are extremely sparse, where the model can fit the zeros.",
+    "provenance": "Generic implementation of the paradigm, not a port of DOMINANT or AnomalyDAE, and not method-equivalent to them."
+  },
+  "local_affinity": {
+    "computes": "L2-normalises every attribute row, averages the normalised rows of a node's neighbours, and scores the node by 1 minus the cosine similarity between its own normalised row and that neighbour average. No training.",
+    "reference_frame": "Neighbour-relative: each node is compared only with its own neighbours.",
+    "inputs": "Node attributes and edges. Isolated nodes receive the maximum score by convention.",
+    "degenerates_when": "Average degree is large, because the neighbour average then approaches the global mean for every node and the comparison loses resolution. Also when edges are formed by a mechanism unrelated to attributes, where neighbour disagreement is expected for normal nodes too.",
+    "provenance": "Cheap non-parametric view in the spirit of TAM and of the affinity term in CoLA and SL-GAD; it is not those methods and it trains nothing."
+  },
+  "contrastive": {
+    "computes": "A two-layer GCN encoder trained 100 epochs to maximise the cosine agreement between the embeddings of two feature-dropout views of the graph; the score is 1 minus the agreement between the clean embedding and a lightly dropped one.",
+    "reference_frame": "Per-node stability of the embedding under attribute dropout, read in a globally trained embedding space.",
+    "inputs": "Node attributes and edges.",
+    "degenerates_when": "Attributes are sparse or redundant, because dropping entries then changes little and every node looks stable. It measures robustness to attribute noise, not agreement between a node and its surrounding subgraph.",
+    "provenance": "Generic implementation, not a port of ANEMONE or GRADATE; it does not sample subgraphs."
+  },
+  "adversarial": {
+    "computes": "A GCN discriminator trained 100 epochs to separate the real attributes from the same attributes plus Gaussian noise; the score is 1 minus the discriminator's confidence on the real node.",
+    "reference_frame": "Global: one discriminator over the whole graph.",
+    "inputs": "Node attributes and edges.",
+    "degenerates_when": "The discriminator saturates, which happens when the attribute scale makes the added noise trivially detectable or trivially invisible; the scores then collapse into a narrow band.",
+    "provenance": "Generic implementation, not a port of GAAN; there is no generator."
+  },
+  "subgraph_contrast": {
+    "computes": "For each node, samples a local subgraph by random walk with restart, contrasts the node against a readout of that subgraph with a bilinear discriminator, and adds a feature-reconstruction branch for the target node; scores average several test rounds.",
+    "reference_frame": "Subgraph-relative: each node is compared with its own sampled neighbourhood.",
+    "inputs": "Node attributes and edges. The only view that uses the GPU; the most expensive paradigm in the library.",
+    "degenerates_when": "The sampled subgraph is not informative about the node, for instance when edges are dense enough that a random walk reaches an arbitrary part of the graph.",
+    "provenance": "Faithful port of the CoLA and SL-GAD family, validated against its reference under an identical protocol."
+  },
+  "one_class": {
+    "computes": "A two-layer GCN trained 100 epochs with a Deep SVDD objective that pulls all node embeddings toward one moving centre; the score is the squared distance from that centre.",
+    "reference_frame": "Global: a single centre for the whole graph, so a node is judged against the bulk of all nodes, not against its neighbours.",
+    "inputs": "Node attributes and edges. The GCN layers smooth attributes over neighbourhoods before the distance is taken.",
+    "degenerates_when": "The objective collapses the embedding, which makes every distance nearly equal and the score near-constant. This is a known failure of this implementation.",
+    "provenance": "Generic implementation of the paradigm, not a port of OCGNN or Deep SAD."
+  },
+  "density": {
+    "computes": "Local Outlier Factor with 20 neighbours on the RAW attribute rows; the score is the LOF outlier factor.",
+    "reference_frame": "Attribute space only: nearest neighbours are taken in attribute space, not in the graph.",
+    "inputs": "Node attributes. It does not read the edges at all.",
+    "degenerates_when": "Attributes are high-dimensional or binary and sparse, where nearest-neighbour distances concentrate and the factor loses meaning.",
+    "provenance": "Standard LOF applied to node attributes."
+  },
+  "community": {
+    "computes": "Assigns each node to a Louvain community, takes the centroid of the raw attributes of that community, and scores the node by its distance to that centroid divided by the community's mean distance.",
+    "reference_frame": "Community-relative: each node is compared with its own community's attribute centroid.",
+    "inputs": "Node attributes and the Louvain partition of the edges.",
+    "degenerates_when": "Modularity is low or the communities are few and very large, because the centroid is then close to the global mean and the normalisation by the community spread removes what is left.",
+    "provenance": "Ours."
+  },
+  "homophily_violation": {
+    "computes": "Averages the raw attribute rows of a node's neighbours and scores the node by the Euclidean distance between its own row and that average.",
+    "reference_frame": "Neighbour-relative, on raw attributes and unnormalised, so it is sensitive to attribute scale.",
+    "inputs": "Node attributes and edges. Nodes with no neighbours get the median score.",
+    "degenerates_when": "Average degree is large, for the same reason as local affinity: the neighbour average converges to the global mean. It differs from local affinity only in using distance on raw rows rather than cosine on normalised rows, so the two are strongly related and rarely independent evidence.",
+    "provenance": "Ours."
+  },
+  "spectral": {
+    "computes": "Reduces the attributes to a single scalar per node, the L2 norm of its attribute row, and measures the high-frequency energy of that scalar signal on the graph: the top half of the Laplacian eigenvectors below 3000 nodes, otherwise the residual of one-hop smoothing.",
+    "reference_frame": "Structure-only, applied to one scalar summary of the attributes.",
+    "inputs": "Edges and the attribute norm. It cannot see the direction of the attribute vector, only its magnitude.",
+    "degenerates_when": "Anomalies are not distinguished by attribute magnitude, or the graph is dense enough that one-hop smoothing removes almost nothing.",
+    "provenance": "Ours."
+  },
+  "attr_struct_mismatch": {
+    "computes": "Builds two rankings, one by mean distance to the 10 nearest neighbours in attribute space and one by the homophily-violation score, and scores each node by the absolute difference between its two ranks.",
+    "reference_frame": "Cross-modal: it measures disagreement between an attribute-space view and a neighbour-relative view.",
+    "inputs": "Node attributes and edges.",
+    "degenerates_when": "Either component is degenerate, since the difference of a meaningful ranking and a noisy one is noise. In particular it inherits the high-degree failure of the neighbour-relative half.",
+    "provenance": "Ours."
+  },
+  "conformity": {
+    "computes": "Fits a rank-5 truncated SVD to the raw attributes and scores each node by the NEGATIVE of its reconstruction residual, so nodes that sit unusually close to the dominant linear structure score highest. Deterministic.",
+    "reference_frame": "Global attribute space, with the sign inverted relative to every other attribute view.",
+    "inputs": "Node attributes only.",
+    "degenerates_when": "Attributes are not template-dominated, where being close to the dominant subspace is simply being normal. The inverted sign means that when this view is wrong it is actively anti-correlated with the target, not merely uninformative.",
+    "provenance": "Ours."
+  },
+  "peripheral_mismatch": {
+    "computes": "Rank fusion of four deterministic quantities: low degree, high clustering, SVD attribute residual, and distance between a node's attributes and its neighbourhood's.",
+    "reference_frame": "Mixed, designed for graphs of a few hundred nodes where trained detectors are dominated by seed variance.",
+    "inputs": "Node attributes and edges.",
+    "degenerates_when": "The graph is large enough that trained views are stable, where this composite has no advantage.",
+    "provenance": "Ours."
+  },
+  "attribute_inflation": {
+    "computes": "Ranks nodes within each attribute dimension and aggregates the high ranks, so nodes that are simultaneously high across many low-dimensional count-like attributes score highest. Deterministic.",
+    "reference_frame": "Global attribute space, per dimension.",
+    "inputs": "Node attributes only.",
+    "degenerates_when": "Attributes are not count-like or are high-dimensional, where being high in many dimensions is not evidence of manipulation.",
+    "provenance": "Ours."
+  },
+  "clique_density": {
+    "computes": "Triangle count of a node multiplied by its clustering coefficient. Deterministic.",
+    "reference_frame": "Structure-only, local.",
+    "inputs": "Edges only. It does not read the attributes.",
+    "degenerates_when": "The graph is globally dense or highly clustered, where high closure is the norm rather than the exception.",
+    "provenance": "Ours."
+  },
+  "linear_residual": {
+    "computes": "Radar's residual decomposition, attributes explained linearly by the other nodes' attributes with a graph-Laplacian coherence term; the score is the norm of the residual. Deterministic.",
+    "reference_frame": "Global attribute space with graph coherence.",
+    "inputs": "Node attributes and edges, through the PyGOD Radar implementation.",
+    "degenerates_when": "Attributes are sparse or binary, where the residual is dominated by sparsity noise rather than by anomaly.",
+    "provenance": "Wraps the PyGOD implementation of Radar (Li et al., IJCAI 2017)."
+  },
+  "_stats_legend_prescriptive_v1": {
+    "how_to_read_the_profile": "Each field is a label-free statistic of this graph. Read the definitions literally: several fields do not mean what their name suggests.",
+    "num_nodes": "Number of nodes.",
+    "num_edges": "Number of directed edge entries in the edge list (each undirected edge appears twice).",
+    "density": "num_edges / (n*(n-1)). A value above ~0.01 means neighbourhoods cover a large share of the graph.",
+    "avg_degree": "Mean number of neighbours. Any neighbour-averaged quantity converges to the global mean as this grows, so neighbour-relative views lose resolution on high-degree graphs.",
+    "max_degree": "Largest neighbour count.",
+    "degree_std": "Standard deviation of the degree.",
+    "clustering_coeff": "Average local clustering coefficient (triangle closure). Estimated by sampling above 2M edges.",
+    "num_communities": "Number of communities found by Louvain. Louvain is run WITHOUT a fixed seed, so this and the two fields below vary slightly between runs.",
+    "modularity": "Modularity of that Louvain partition. Below ~0.3 the partition is weak, so community-relative views have little to measure against.",
+    "homophily": "NOT label homophily and NOT feature homophily. It is the fraction of edges whose two endpoints fall in the SAME LOUVAIN COMMUNITY, computed from structure alone. It says nothing about whether neighbours have similar attributes.",
+    "feature_dim": "Number of node attributes.",
+    "feature_sparsity": "Fraction of attribute entries that are exactly zero.",
+    "feature_dup_rate": "Fraction of nodes whose attribute row is byte-identical to at least one other node's row. High values mean template-dominated attributes.",
+    "spectral_gap": "Second-smallest eigenvalue of the UNNORMALISED Laplacian (algebraic connectivity). It scales with degree, so it is comparable across graphs only at similar average degree.",
+    "is_power_law": "Heuristic only: true when degree_std > 2 * avg_degree.",
+    "how_to_read_the_landmarkers": "Each landmarker is the full score vector of one cheap paradigm, min-max normalised to [0,1] and then summarised. Normalisation is per paradigm, so the mean and the quantiles are comparable ACROSS paradigms only as shape, never as strength: a high mean means the scores are spread over the range, not that the mechanism is strong. What carries information is the gap between the upper quantiles and the median within one paradigm. A p99 close to the median means the score has no separated tail. A landmarker cannot tell you the sign of the signal: a mechanism that is present but inverted on this graph produces the same shape as one that is present and correct."
+  }
+}

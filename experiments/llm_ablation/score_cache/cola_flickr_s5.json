@@ -1,0 +1,46 @@
+{
+  "dataset": "cola_flickr",
+  "seed": 5,
+  "applicable": [
+    "reconstruction",
+    "local_affinity",
+    "contrastive",
+    "adversarial",
+    "subgraph_contrast",
+    "one_class",
+    "density",
+    "community",
+    "homophily_violation",
+    "spectral",
+    "attr_struct_mismatch",
+    "clique_density"
+  ],
+  "cached": [
+    "adversarial",
+    "attr_struct_mismatch",
+    "clique_density",
+    "community",
+    "contrastive",
+    "density",
+    "homophily_violation",
+    "local_affinity",
+    "one_class",
+    "reconstruction",
+    "spectral",
+    "subgraph_contrast"
+  ],
+  "timings_s": {
+    "reconstruction": 93.6,
+    "local_affinity": 1.7,
+    "contrastive": 163.4,
+    "adversarial": 59.7,
+    "subgraph_contrast": 246.7,
+    "one_class": 26.6,
+    "density": 5.3,
+    "community": 0.7,
+    "homophily_violation": 1.6,
+    "spectral": 0.4,
+    "attr_struct_mismatch": 6.6,
+    "clique_density": 9.3
+  }
+}

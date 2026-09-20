@@ -1,0 +1,9 @@
+== enron
+  conformity_svd         AUROC= 83.7  tail_sep=0.620  UED=0.236
+  neg_linear_residual    AUROC= 41.6  tail_sep=0.960  UED=0.668
+  neg_isolation_forest   AUROC= 64.8  tail_sep=0.000  UED=0.253
+== tolokers
+  conformity_svd         AUROC= 52.3  tail_sep=0.682  UED=0.238
+  neg_linear_residual    AUROC= 63.2  tail_sep=0.931  UED=0.466
+  neg_isolation_forest   AUROC= 59.6  tail_sep=0.711  UED=0.130
+DIAG_DONE

@@ -1,0 +1,46 @@
+{
+  "dataset": "weibo",
+  "seed": 2,
+  "applicable": [
+    "reconstruction",
+    "local_affinity",
+    "contrastive",
+    "adversarial",
+    "subgraph_contrast",
+    "one_class",
+    "density",
+    "community",
+    "homophily_violation",
+    "spectral",
+    "attr_struct_mismatch",
+    "linear_residual"
+  ],
+  "cached": [
+    "adversarial",
+    "attr_struct_mismatch",
+    "community",
+    "contrastive",
+    "density",
+    "homophily_violation",
+    "linear_residual",
+    "local_affinity",
+    "one_class",
+    "reconstruction",
+    "spectral",
+    "subgraph_contrast"
+  ],
+  "timings_s": {
+    "reconstruction": 26.5,
+    "local_affinity": 0.0,
+    "contrastive": 24.2,
+    "adversarial": 17.3,
+    "subgraph_contrast": 69.5,
+    "one_class": 13.6,
+    "density": 0.3,
+    "community": 0.0,
+    "homophily_violation": 0.0,
+    "spectral": 0.0,
+    "attr_struct_mismatch": 0.4,
+    "linear_residual": 9.7
+  }
+}

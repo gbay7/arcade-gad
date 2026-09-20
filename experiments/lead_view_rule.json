@@ -1,0 +1,5503 @@
+{
+  "summary": {
+    "benchmark": {
+      "per_dataset": {
+        "acm": [
+          84.3,
+          76.7
+        ],
+        "blogcatalog": [
+          64.1,
+          51.7
+        ],
+        "books": [
+          46.9,
+          43.8
+        ],
+        "cola_flickr": [
+          72.5,
+          55.2
+        ],
+        "disney": [
+          72.1,
+          55.6
+        ],
+        "enron": [
+          33.2,
+          38.2
+        ],
+        "inj_amazon": [
+          75.4,
+          77.2
+        ],
+        "inj_cora": [
+          91.9,
+          83.9
+        ],
+        "reddit": [
+          58.2,
+          58.4
+        ],
+        "weibo": [
+          79.6,
+          52.3
+        ]
+      },
+      "mean_shipped": 68.6,
+      "mean_lead_only": 60.1,
+      "n": 249,
+      "graphs_worse": 7,
+      "graphs": 10
+    },
+    "heldout": {
+      "per_dataset": {
+        "amazon_fraud": [
+          51.1,
+          56.5
+        ],
+        "tolokers": [
+          50.6,
+          47.3
+        ]
+      },
+      "mean_shipped": 50.7,
+      "mean_lead_only": 48.7,
+      "n": 81,
+      "graphs_worse": 1,
+      "graphs": 2
+    },
+    "heldout_domain": {
+      "per_dataset": {
+        "amazon_fraud": [
+          51.9,
+          57.6
+        ],
+        "tolokers": [
+          52.5,
+          55.8
+        ]
+      },
+      "mean_shipped": 52.2,
+      "mean_lead_only": 56.6,
+      "n": 21,
+      "graphs_worse": 0,
+      "graphs": 2
+    }
+  },
+  "decisions": [
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "acm",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 89.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "acm",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 89.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "acm",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 89.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "acm",
+      "repeat": 0,
+      "selected": [
+        "clique_density",
+        "attr_struct_mismatch",
+        "community",
+        "local_affinity"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 91.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 73.6,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "acm",
+      "repeat": 1,
+      "selected": [
+        "clique_density",
+        "attr_struct_mismatch",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 88.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 73.6,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "acm",
+      "repeat": 2,
+      "selected": [
+        "clique_density",
+        "attr_struct_mismatch",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 88.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 73.6,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "acm",
+      "repeat": 0,
+      "selected": [
+        "clique_density",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 85.8,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 73.6,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "acm",
+      "repeat": 1,
+      "selected": [
+        "clique_density",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 85.8,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 73.6,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "acm",
+      "repeat": 2,
+      "selected": [
+        "clique_density",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 85.8,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 73.6,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "acm",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 88.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "acm",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 88.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "acm",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 88.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "acm",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 84.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "acm",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 84.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "acm",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 84.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "acm",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 86.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "acm",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 86.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "acm",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 86.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "acm",
+      "repeat": 0,
+      "selected": [
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "community",
+      "shipped_auroc": 75.0,
+      "shipped_mode": "select",
+      "lead_only_auroc": 75.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "acm",
+      "repeat": 1,
+      "selected": [
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "community",
+      "shipped_auroc": 75.0,
+      "shipped_mode": "select",
+      "lead_only_auroc": 75.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "acm",
+      "repeat": 2,
+      "selected": [
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "community",
+      "shipped_auroc": 75.0,
+      "shipped_mode": "select",
+      "lead_only_auroc": 75.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "acm",
+      "repeat": 0,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "density"
+      ],
+      "lead": "community",
+      "shipped_auroc": 75.0,
+      "shipped_mode": "select",
+      "lead_only_auroc": 75.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "acm",
+      "repeat": 1,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "density"
+      ],
+      "lead": "community",
+      "shipped_auroc": 75.0,
+      "shipped_mode": "select",
+      "lead_only_auroc": 75.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "acm",
+      "repeat": 2,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "density"
+      ],
+      "lead": "community",
+      "shipped_auroc": 75.0,
+      "shipped_mode": "select",
+      "lead_only_auroc": 75.0,
+      "held_out": false
+    },
+    {
+      "pack": "domain",
+      "model": "claude:haiku",
+      "dataset": "amazon_fraud",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "attr_struct_mismatch",
+        "spectral"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 53.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.9,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "claude:haiku",
+      "dataset": "amazon_fraud",
+      "repeat": 1,
+      "selected": [
+        "attr_struct_mismatch",
+        "local_affinity"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 60.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 53.2,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "claude:haiku",
+      "dataset": "amazon_fraud",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "attr_struct_mismatch",
+        "spectral"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 53.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.9,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "claude:opus",
+      "dataset": "amazon_fraud",
+      "repeat": 0,
+      "selected": [
+        "attr_struct_mismatch",
+        "one_class",
+        "reconstruction"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 49.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 53.2,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "claude:opus",
+      "dataset": "amazon_fraud",
+      "repeat": 1,
+      "selected": [
+        "one_class",
+        "attr_struct_mismatch",
+        "density"
+      ],
+      "lead": "one_class",
+      "shipped_auroc": 60.9,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 64.4,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "claude:opus",
+      "dataset": "amazon_fraud",
+      "repeat": 2,
+      "selected": [
+        "one_class",
+        "attr_struct_mismatch",
+        "density",
+        "reconstruction"
+      ],
+      "lead": "one_class",
+      "shipped_auroc": 50.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 64.4,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "qwen3:8b",
+      "dataset": "amazon_fraud",
+      "repeat": 0,
+      "selected": [
+        "contrastive",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "contrastive",
+      "shipped_auroc": 46.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 54.6,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "qwen3:8b",
+      "dataset": "amazon_fraud",
+      "repeat": 1,
+      "selected": [
+        "contrastive",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "contrastive",
+      "shipped_auroc": 46.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 54.6,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "qwen3:8b",
+      "dataset": "amazon_fraud",
+      "repeat": 2,
+      "selected": [
+        "contrastive",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "contrastive",
+      "shipped_auroc": 46.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 54.6,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "amazon_fraud",
+      "repeat": 0,
+      "selected": [
+        "attr_struct_mismatch",
+        "local_affinity",
+        "homophily_violation",
+        "spectral"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 48.9,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 53.2,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "amazon_fraud",
+      "repeat": 1,
+      "selected": [
+        "attr_struct_mismatch",
+        "local_affinity",
+        "homophily_violation",
+        "spectral"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 48.9,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 53.2,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "amazon_fraud",
+      "repeat": 2,
+      "selected": [
+        "attr_struct_mismatch",
+        "local_affinity",
+        "homophily_violation",
+        "spectral"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 48.9,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 53.2,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "blogcatalog",
+      "repeat": 0,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "clique_density"
+      ],
+      "lead": "community",
+      "shipped_auroc": 60.6,
+      "shipped_mode": "select",
+      "lead_only_auroc": 74.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "blogcatalog",
+      "repeat": 1,
+      "selected": [
+        "reconstruction",
+        "density",
+        "subgraph_contrast",
+        "clique_density"
+      ],
+      "lead": "reconstruction",
+      "shipped_auroc": 78.9,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 74.6,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "blogcatalog",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "density",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.4,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "blogcatalog",
+      "repeat": 0,
+      "selected": [
+        "spectral",
+        "clique_density",
+        "attr_struct_mismatch",
+        "community"
+      ],
+      "lead": "spectral",
+      "shipped_auroc": 78.8,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 72.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "blogcatalog",
+      "repeat": 1,
+      "selected": [
+        "clique_density",
+        "spectral",
+        "homophily_violation",
+        "community"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 77.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 60.6,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "blogcatalog",
+      "repeat": 2,
+      "selected": [
+        "clique_density",
+        "spectral",
+        "attr_struct_mismatch",
+        "community"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 78.8,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 60.6,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "blogcatalog",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.4,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "blogcatalog",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.4,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "blogcatalog",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.4,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "blogcatalog",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.4,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "blogcatalog",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.4,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "blogcatalog",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.4,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "blogcatalog",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 74.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "blogcatalog",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 74.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "blogcatalog",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 74.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "blogcatalog",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 74.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "blogcatalog",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 74.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "blogcatalog",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 74.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "blogcatalog",
+      "repeat": 0,
+      "selected": [
+        "density",
+        "community",
+        "homophily_violation",
+        "spectral"
+      ],
+      "lead": "density",
+      "shipped_auroc": 74.5,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 68.6,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "blogcatalog",
+      "repeat": 1,
+      "selected": [
+        "density",
+        "community",
+        "homophily_violation",
+        "spectral"
+      ],
+      "lead": "density",
+      "shipped_auroc": 74.5,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 68.6,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "blogcatalog",
+      "repeat": 2,
+      "selected": [
+        "density",
+        "community",
+        "homophily_violation",
+        "spectral"
+      ],
+      "lead": "density",
+      "shipped_auroc": 74.5,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 68.6,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "blogcatalog",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.4,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "blogcatalog",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.4,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "blogcatalog",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.4,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 43.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "books",
+      "repeat": 0,
+      "selected": [
+        "attribute_inflation",
+        "attr_struct_mismatch",
+        "homophily_violation"
+      ],
+      "lead": "attribute_inflation",
+      "shipped_auroc": 72.1,
+      "shipped_mode": "select",
+      "lead_only_auroc": 72.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "books",
+      "repeat": 1,
+      "selected": [
+        "attribute_inflation",
+        "attr_struct_mismatch",
+        "homophily_violation",
+        "community"
+      ],
+      "lead": "attribute_inflation",
+      "shipped_auroc": 72.1,
+      "shipped_mode": "select",
+      "lead_only_auroc": 72.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "books",
+      "repeat": 2,
+      "selected": [
+        "attribute_inflation",
+        "attr_struct_mismatch",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "attribute_inflation",
+      "shipped_auroc": 72.1,
+      "shipped_mode": "select",
+      "lead_only_auroc": 72.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "books",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "attr_struct_mismatch",
+        "community"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 33.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 48.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "books",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "attr_struct_mismatch",
+        "community"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 33.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 48.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "books",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "attr_struct_mismatch",
+        "community"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 33.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 48.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "books",
+      "repeat": 0,
+      "selected": [
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "attribute_inflation"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 72.1,
+      "shipped_mode": "select",
+      "lead_only_auroc": 36.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "books",
+      "repeat": 1,
+      "selected": [
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "attribute_inflation"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 72.1,
+      "shipped_mode": "select",
+      "lead_only_auroc": 36.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "books",
+      "repeat": 2,
+      "selected": [
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "attribute_inflation"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 72.1,
+      "shipped_mode": "select",
+      "lead_only_auroc": 36.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "books",
+      "repeat": 0,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 32.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 31.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "books",
+      "repeat": 1,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 32.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 31.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "books",
+      "repeat": 2,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 32.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 31.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "books",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 29.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 48.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "books",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 29.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 48.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "books",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 29.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 48.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "books",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "attribute_inflation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 72.1,
+      "shipped_mode": "select",
+      "lead_only_auroc": 48.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "books",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "attribute_inflation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 72.1,
+      "shipped_mode": "select",
+      "lead_only_auroc": 48.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "books",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "attribute_inflation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 72.1,
+      "shipped_mode": "select",
+      "lead_only_auroc": 48.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "books",
+      "repeat": 0,
+      "selected": [
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "community",
+      "shipped_auroc": 31.8,
+      "shipped_mode": "select",
+      "lead_only_auroc": 31.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "books",
+      "repeat": 1,
+      "selected": [
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "community",
+      "shipped_auroc": 31.8,
+      "shipped_mode": "select",
+      "lead_only_auroc": 31.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "books",
+      "repeat": 2,
+      "selected": [
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "community",
+      "shipped_auroc": 31.8,
+      "shipped_mode": "select",
+      "lead_only_auroc": 31.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "books",
+      "repeat": 0,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 32.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 31.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "books",
+      "repeat": 1,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 32.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 31.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "books",
+      "repeat": 2,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 32.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 31.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "cola_flickr",
+      "repeat": 0,
+      "selected": [
+        "homophily_violation",
+        "community",
+        "density"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 69.5,
+      "shipped_mode": "select",
+      "lead_only_auroc": 72.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "cola_flickr",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "density",
+        "subgraph_contrast"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 69.9,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 37.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "cola_flickr",
+      "repeat": 2,
+      "selected": [
+        "subgraph_contrast",
+        "homophily_violation",
+        "community",
+        "clique_density"
+      ],
+      "lead": "subgraph_contrast",
+      "shipped_auroc": 76.5,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 78.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "cola_flickr",
+      "repeat": 0,
+      "selected": [
+        "clique_density",
+        "spectral",
+        "homophily_violation",
+        "community"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 75.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "cola_flickr",
+      "repeat": 1,
+      "selected": [
+        "clique_density",
+        "spectral",
+        "attr_struct_mismatch",
+        "community"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 74.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "cola_flickr",
+      "repeat": 2,
+      "selected": [
+        "clique_density",
+        "spectral",
+        "attr_struct_mismatch",
+        "community"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 74.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "cola_flickr",
+      "repeat": 0,
+      "selected": [
+        "clique_density",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 69.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "cola_flickr",
+      "repeat": 1,
+      "selected": [
+        "clique_density",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 69.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "cola_flickr",
+      "repeat": 2,
+      "selected": [
+        "clique_density",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 69.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "cola_flickr",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "clique_density",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 65.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 37.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "cola_flickr",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "clique_density",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 65.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 37.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "cola_flickr",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "clique_density",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 65.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 37.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "cola_flickr",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 72.9,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 37.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "cola_flickr",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 72.9,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 37.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "cola_flickr",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 72.9,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 37.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "cola_flickr",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 73.8,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 37.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "cola_flickr",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 73.8,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 37.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "cola_flickr",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 73.8,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 37.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "cola_flickr",
+      "repeat": 0,
+      "selected": [
+        "homophily_violation",
+        "clique_density",
+        "community"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 76.0,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 72.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "cola_flickr",
+      "repeat": 1,
+      "selected": [
+        "homophily_violation",
+        "clique_density",
+        "community"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 76.0,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 72.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "cola_flickr",
+      "repeat": 2,
+      "selected": [
+        "homophily_violation",
+        "clique_density",
+        "community"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 76.0,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 72.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "cola_flickr",
+      "repeat": 0,
+      "selected": [
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "community",
+      "shipped_auroc": 75.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 75.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "cola_flickr",
+      "repeat": 1,
+      "selected": [
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "community",
+      "shipped_auroc": 75.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 75.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "cola_flickr",
+      "repeat": 2,
+      "selected": [
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "community",
+      "shipped_auroc": 75.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 75.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "disney",
+      "repeat": 0,
+      "selected": [
+        "peripheral_mismatch",
+        "local_affinity",
+        "attr_struct_mismatch"
+      ],
+      "lead": "peripheral_mismatch",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 86.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "disney",
+      "repeat": 1,
+      "selected": [
+        "peripheral_mismatch",
+        "local_affinity",
+        "attr_struct_mismatch",
+        "community"
+      ],
+      "lead": "peripheral_mismatch",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 86.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "disney",
+      "repeat": 2,
+      "selected": [
+        "peripheral_mismatch",
+        "attr_struct_mismatch",
+        "local_affinity"
+      ],
+      "lead": "peripheral_mismatch",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 86.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "disney",
+      "repeat": 0,
+      "selected": [
+        "peripheral_mismatch",
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "peripheral_mismatch",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 86.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "disney",
+      "repeat": 1,
+      "selected": [
+        "peripheral_mismatch",
+        "community",
+        "local_affinity",
+        "homophily_violation"
+      ],
+      "lead": "peripheral_mismatch",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 86.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "disney",
+      "repeat": 2,
+      "selected": [
+        "peripheral_mismatch",
+        "local_affinity",
+        "attr_struct_mismatch",
+        "community"
+      ],
+      "lead": "peripheral_mismatch",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 86.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "disney",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "peripheral_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "disney",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "peripheral_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "disney",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "peripheral_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "disney",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "peripheral_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "disney",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "peripheral_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "disney",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "peripheral_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "disney",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 45.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "disney",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 45.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "disney",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 45.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "disney",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "disney",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "disney",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "disney",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "disney",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "disney",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 49.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "disney",
+      "repeat": 0,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "peripheral_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 56.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "disney",
+      "repeat": 1,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "peripheral_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 56.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "disney",
+      "repeat": 2,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "peripheral_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 86.4,
+      "shipped_mode": "select",
+      "lead_only_auroc": 56.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "enron",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "spectral",
+        "community"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 36.5,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 38.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "enron",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "spectral",
+        "community"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 36.5,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 38.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "enron",
+      "repeat": 2,
+      "selected": [
+        "homophily_violation",
+        "spectral",
+        "local_affinity"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 32.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 46.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "enron",
+      "repeat": 0,
+      "selected": [
+        "density",
+        "spectral",
+        "homophily_violation",
+        "community"
+      ],
+      "lead": "density",
+      "shipped_auroc": 25.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 29.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "enron",
+      "repeat": 1,
+      "selected": [
+        "spectral",
+        "density",
+        "homophily_violation",
+        "community"
+      ],
+      "lead": "spectral",
+      "shipped_auroc": 25.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 26.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "enron",
+      "repeat": 2,
+      "selected": [
+        "homophily_violation",
+        "spectral",
+        "density",
+        "community"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 25.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 46.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "enron",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "spectral",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 38.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 38.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "enron",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "spectral",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 38.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 38.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "enron",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "spectral",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 38.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 38.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "enron",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 32.0,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 38.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "enron",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 32.0,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 38.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "enron",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 32.0,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 38.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "enron",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "spectral"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 32.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 38.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "enron",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "spectral"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 32.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 38.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "enron",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "spectral"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 32.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 38.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "enron",
+      "repeat": 0,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "density"
+      ],
+      "lead": "community",
+      "shipped_auroc": 32.9,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 40.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "enron",
+      "repeat": 1,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "density"
+      ],
+      "lead": "community",
+      "shipped_auroc": 32.9,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 40.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "enron",
+      "repeat": 2,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "density"
+      ],
+      "lead": "community",
+      "shipped_auroc": 32.9,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 40.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "enron",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "spectral",
+        "community"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 36.5,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 38.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "enron",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "spectral",
+        "community"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 36.5,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 38.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "enron",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "spectral",
+        "community"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 36.5,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 38.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "inj_amazon",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "subgraph_contrast",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 80.0,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "inj_amazon",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 74.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "inj_amazon",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 73.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "inj_amazon",
+      "repeat": 0,
+      "selected": [
+        "attr_struct_mismatch",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 74.0,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 49.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "inj_amazon",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "attr_struct_mismatch",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 76.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "inj_amazon",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "attr_struct_mismatch",
+        "reconstruction"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 76.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "inj_amazon",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "subgraph_contrast"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 80.0,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "inj_amazon",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "subgraph_contrast"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 80.0,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "inj_amazon",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "subgraph_contrast"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 80.0,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "inj_amazon",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "community",
+        "spectral"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 74.3,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "inj_amazon",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "community",
+        "spectral"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 74.3,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "inj_amazon",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "community",
+        "spectral"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 74.3,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "inj_amazon",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 73.9,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "inj_amazon",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 73.9,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "inj_amazon",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 73.9,
+      "shipped_mode": "hybrid",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "inj_amazon",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 74.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "inj_amazon",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 74.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "inj_amazon",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 74.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "inj_amazon",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 75.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "inj_amazon",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 75.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "inj_amazon",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 75.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 79.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "inj_amazon",
+      "repeat": 0,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 74.0,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 74.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "inj_amazon",
+      "repeat": 1,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 74.0,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 74.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "inj_amazon",
+      "repeat": 2,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 74.0,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 74.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:claude-opus-4-8",
+      "dataset": "inj_cora",
+      "repeat": 0,
+      "selected": [
+        "subgraph_contrast",
+        "reconstruction",
+        "local_affinity",
+        "clique_density"
+      ],
+      "lead": "subgraph_contrast",
+      "shipped_auroc": 93.6,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 88.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:claude-opus-4-8",
+      "dataset": "inj_cora",
+      "repeat": 1,
+      "selected": [
+        "subgraph_contrast",
+        "reconstruction",
+        "clique_density",
+        "local_affinity"
+      ],
+      "lead": "subgraph_contrast",
+      "shipped_auroc": 93.6,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 88.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:claude-opus-4-8",
+      "dataset": "inj_cora",
+      "repeat": 2,
+      "selected": [
+        "subgraph_contrast",
+        "clique_density",
+        "local_affinity",
+        "attr_struct_mismatch"
+      ],
+      "lead": "subgraph_contrast",
+      "shipped_auroc": 93.6,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 88.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "inj_cora",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "subgraph_contrast",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 93.6,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 86.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "inj_cora",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "subgraph_contrast",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 93.6,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 86.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "inj_cora",
+      "repeat": 2,
+      "selected": [
+        "subgraph_contrast",
+        "clique_density",
+        "community"
+      ],
+      "lead": "subgraph_contrast",
+      "shipped_auroc": 93.3,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 88.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:opus",
+      "dataset": "inj_cora",
+      "repeat": 0,
+      "selected": [
+        "subgraph_contrast",
+        "clique_density",
+        "local_affinity"
+      ],
+      "lead": "subgraph_contrast",
+      "shipped_auroc": 93.6,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 88.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:opus",
+      "dataset": "inj_cora",
+      "repeat": 1,
+      "selected": [
+        "subgraph_contrast",
+        "clique_density",
+        "reconstruction"
+      ],
+      "lead": "subgraph_contrast",
+      "shipped_auroc": 93.3,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 88.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:opus",
+      "dataset": "inj_cora",
+      "repeat": 2,
+      "selected": [
+        "subgraph_contrast",
+        "clique_density",
+        "reconstruction",
+        "attr_struct_mismatch"
+      ],
+      "lead": "subgraph_contrast",
+      "shipped_auroc": 93.3,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 88.4,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "inj_cora",
+      "repeat": 0,
+      "selected": [
+        "clique_density",
+        "community",
+        "homophily_violation",
+        "subgraph_contrast"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 93.3,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 76.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "inj_cora",
+      "repeat": 1,
+      "selected": [
+        "clique_density",
+        "subgraph_contrast",
+        "community",
+        "spectral"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 93.3,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 76.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "inj_cora",
+      "repeat": 2,
+      "selected": [
+        "clique_density",
+        "community",
+        "subgraph_contrast",
+        "local_affinity"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 93.6,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 76.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "inj_cora",
+      "repeat": 0,
+      "selected": [
+        "clique_density",
+        "homophily_violation",
+        "subgraph_contrast"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 93.3,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 76.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "inj_cora",
+      "repeat": 1,
+      "selected": [
+        "clique_density",
+        "homophily_violation",
+        "subgraph_contrast"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 93.3,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 76.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "inj_cora",
+      "repeat": 2,
+      "selected": [
+        "clique_density",
+        "homophily_violation",
+        "subgraph_contrast"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 93.3,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 76.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "inj_cora",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 93.6,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 86.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "inj_cora",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 93.6,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 86.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "inj_cora",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "clique_density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 93.6,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 86.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "inj_cora",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "subgraph_contrast"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 88.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 86.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "inj_cora",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "subgraph_contrast"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 88.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 86.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "inj_cora",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "subgraph_contrast"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 88.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 86.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "inj_cora",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "subgraph_contrast"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 90.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 86.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "inj_cora",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "subgraph_contrast"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 90.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 86.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "inj_cora",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "subgraph_contrast"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 90.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 86.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "inj_cora",
+      "repeat": 0,
+      "selected": [
+        "clique_density",
+        "subgraph_contrast",
+        "homophily_violation"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 93.3,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 76.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "inj_cora",
+      "repeat": 1,
+      "selected": [
+        "clique_density",
+        "subgraph_contrast",
+        "homophily_violation"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 93.3,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 76.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "inj_cora",
+      "repeat": 2,
+      "selected": [
+        "clique_density",
+        "subgraph_contrast",
+        "homophily_violation"
+      ],
+      "lead": "clique_density",
+      "shipped_auroc": 93.3,
+      "shipped_mode": "pairmax",
+      "lead_only_auroc": 76.2,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "inj_cora",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "subgraph_contrast",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 85.9,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 86.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "inj_cora",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "subgraph_contrast",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 85.9,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 86.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "inj_cora",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "subgraph_contrast",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 85.9,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 86.5,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:claude-opus-4-8",
+      "dataset": "reddit",
+      "repeat": 0,
+      "selected": [
+        "homophily_violation",
+        "local_affinity",
+        "attr_struct_mismatch",
+        "spectral"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 59.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:claude-opus-4-8",
+      "dataset": "reddit",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "attr_struct_mismatch",
+        "community",
+        "reconstruction"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 55.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:claude-opus-4-8",
+      "dataset": "reddit",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "attr_struct_mismatch",
+        "reconstruction"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 54.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "reddit",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "attr_struct_mismatch",
+        "spectral"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 58.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "reddit",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 57.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "reddit",
+      "repeat": 2,
+      "selected": [
+        "homophily_violation",
+        "community",
+        "attr_struct_mismatch"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 57.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:opus",
+      "dataset": "reddit",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "attr_struct_mismatch",
+        "reconstruction"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 55.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:opus",
+      "dataset": "reddit",
+      "repeat": 1,
+      "selected": [
+        "community",
+        "attr_struct_mismatch",
+        "spectral",
+        "reconstruction"
+      ],
+      "lead": "community",
+      "shipped_auroc": 55.0,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 57.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:opus",
+      "dataset": "reddit",
+      "repeat": 2,
+      "selected": [
+        "homophily_violation",
+        "community",
+        "attr_struct_mismatch",
+        "reconstruction"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 56.0,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "reddit",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "attr_struct_mismatch",
+        "spectral",
+        "community"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 58.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "reddit",
+      "repeat": 1,
+      "selected": [
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "spectral"
+      ],
+      "lead": "community",
+      "shipped_auroc": 59.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 57.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "reddit",
+      "repeat": 2,
+      "selected": [
+        "community",
+        "density",
+        "spectral",
+        "attr_struct_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 58.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 57.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "reddit",
+      "repeat": 0,
+      "selected": [
+        "homophily_violation",
+        "community",
+        "attr_struct_mismatch"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 57.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "reddit",
+      "repeat": 1,
+      "selected": [
+        "homophily_violation",
+        "community",
+        "attr_struct_mismatch"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 57.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "reddit",
+      "repeat": 2,
+      "selected": [
+        "homophily_violation",
+        "community",
+        "attr_struct_mismatch"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 57.7,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "reddit",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "spectral",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 59.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "reddit",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "spectral",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 59.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "reddit",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "spectral",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 59.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "reddit",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 59.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "reddit",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 59.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "reddit",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "density",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 59.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "reddit",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 59.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "reddit",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 59.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "reddit",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 59.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 58.3,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "reddit",
+      "repeat": 0,
+      "selected": [
+        "community",
+        "spectral",
+        "attr_struct_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 57.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 57.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "reddit",
+      "repeat": 1,
+      "selected": [
+        "community",
+        "spectral",
+        "attr_struct_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 57.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 57.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "reddit",
+      "repeat": 2,
+      "selected": [
+        "community",
+        "spectral",
+        "attr_struct_mismatch"
+      ],
+      "lead": "community",
+      "shipped_auroc": 57.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 57.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "reddit",
+      "repeat": 0,
+      "selected": [
+        "homophily_violation",
+        "spectral",
+        "community"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 60.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "reddit",
+      "repeat": 1,
+      "selected": [
+        "homophily_violation",
+        "spectral",
+        "community"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 60.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.1,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "reddit",
+      "repeat": 2,
+      "selected": [
+        "homophily_violation",
+        "spectral",
+        "community"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 60.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 59.1,
+      "held_out": false
+    },
+    {
+      "pack": "domain",
+      "model": "claude:claude-opus-5",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "conformity",
+        "attr_struct_mismatch",
+        "local_affinity",
+        "community"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "claude:claude-opus-5",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "one_class",
+        "conformity",
+        "attr_struct_mismatch",
+        "local_affinity"
+      ],
+      "lead": "one_class",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 62.7,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "claude:claude-opus-5",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "conformity",
+        "one_class",
+        "attr_struct_mismatch",
+        "community"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "claude:haiku",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "conformity",
+        "attr_struct_mismatch",
+        "homophily_violation",
+        "community"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "claude:haiku",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "community"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "claude:haiku",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "conformity",
+        "attr_struct_mismatch",
+        "homophily_violation"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "claude:opus",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "one_class",
+        "reconstruction",
+        "attr_struct_mismatch"
+      ],
+      "lead": "one_class",
+      "shipped_auroc": 53.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 62.7,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "claude:opus",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "one_class",
+        "reconstruction",
+        "attr_struct_mismatch"
+      ],
+      "lead": "one_class",
+      "shipped_auroc": 53.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 62.7,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "claude:opus",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "one_class",
+        "attr_struct_mismatch",
+        "reconstruction"
+      ],
+      "lead": "one_class",
+      "shipped_auroc": 53.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 62.7,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "qwen3:8b",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "community",
+        "attr_struct_mismatch"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "qwen3:8b",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "community",
+        "attr_struct_mismatch"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "domain",
+      "model": "qwen3:8b",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "community",
+        "attr_struct_mismatch"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "claude:haiku",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "conformity",
+        "adversarial",
+        "homophily_violation"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "claude:haiku",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "attr_struct_mismatch",
+        "homophily_violation",
+        "community"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 41.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 44.6,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "claude:haiku",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "conformity",
+        "adversarial",
+        "homophily_violation",
+        "community"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "claude:opus",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "attr_struct_mismatch",
+        "homophily_violation",
+        "community",
+        "conformity"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 44.6,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "claude:opus",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "attr_struct_mismatch",
+        "homophily_violation",
+        "conformity",
+        "community"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 44.6,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "claude:opus",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "attr_struct_mismatch",
+        "conformity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 44.6,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "claude:sonnet",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "contrastive",
+        "attr_struct_mismatch",
+        "spectral"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 48.3,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "claude:sonnet",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "attr_struct_mismatch",
+        "community",
+        "spectral"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 45.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "claude:sonnet",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "attr_struct_mismatch",
+        "homophily_violation",
+        "community",
+        "conformity"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 44.6,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "gemma4:12b",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "conformity",
+        "attr_struct_mismatch",
+        "homophily_violation"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "gemma4:12b",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "conformity",
+        "attr_struct_mismatch",
+        "homophily_violation"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "gemma4:12b",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "conformity",
+        "attr_struct_mismatch",
+        "homophily_violation"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "gemma4:e2b",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "gemma4:e2b",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "gemma4:e2b",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "llama3.1:8b",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "llama3.1:8b",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "llama3.1:8b",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "phi4:14b",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "phi4:14b",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "phi4:14b",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "qwen3:4b",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "attr_struct_mismatch",
+        "community",
+        "local_affinity",
+        "homophily_violation"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 40.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 44.6,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "qwen3:4b",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "attr_struct_mismatch",
+        "community",
+        "local_affinity",
+        "homophily_violation"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 40.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 44.6,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "qwen3:4b",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "attr_struct_mismatch",
+        "community",
+        "local_affinity",
+        "homophily_violation"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 40.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 44.6,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "qwen3:8b",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "adversarial"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "qwen3:8b",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "adversarial"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "probeall",
+      "model": "qwen3:8b",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "adversarial"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "claude:claude-opus-4-8",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "attr_struct_mismatch",
+        "conformity",
+        "homophily_violation",
+        "community"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 44.6,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "claude:claude-opus-4-8",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "community",
+        "conformity"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.6,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "claude:claude-opus-4-8",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "attr_struct_mismatch",
+        "homophily_violation",
+        "conformity",
+        "community"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 44.6,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "conformity",
+        "attr_struct_mismatch",
+        "homophily_violation"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "claude:opus",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "attr_struct_mismatch",
+        "local_affinity",
+        "community",
+        "conformity"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 44.6,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "claude:opus",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "conformity",
+        "attr_struct_mismatch",
+        "community",
+        "local_affinity"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "claude:opus",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "attr_struct_mismatch",
+        "conformity",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 44.6,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "community",
+        "local_affinity",
+        "attr_struct_mismatch",
+        "density"
+      ],
+      "lead": "community",
+      "shipped_auroc": 41.2,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 43.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "attr_struct_mismatch",
+        "homophily_violation",
+        "community",
+        "spectral"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 45.8,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 44.6,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "attr_struct_mismatch",
+        "spectral",
+        "community",
+        "local_affinity"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 45.6,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 44.6,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 39.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 39.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 39.4,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "conformity"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 39.4,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "conformity",
+        "attr_struct_mismatch",
+        "homophily_violation",
+        "community"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "conformity",
+        "attr_struct_mismatch",
+        "homophily_violation",
+        "community"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "conformity",
+        "attr_struct_mismatch",
+        "homophily_violation",
+        "community"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "tolokers",
+      "repeat": 0,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "tolokers",
+      "repeat": 1,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "tolokers",
+      "repeat": 2,
+      "selected": [
+        "conformity",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "conformity",
+      "shipped_auroc": 52.3,
+      "shipped_mode": "select",
+      "lead_only_auroc": 52.3,
+      "held_out": true
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "weibo",
+      "repeat": 0,
+      "selected": [
+        "attr_struct_mismatch",
+        "linear_residual",
+        "homophily_violation",
+        "spectral"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 94.9,
+      "shipped_mode": "select",
+      "lead_only_auroc": 38.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "weibo",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "attr_struct_mismatch",
+        "density"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 41.5,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 25.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:haiku",
+      "dataset": "weibo",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "attr_struct_mismatch",
+        "linear_residual",
+        "community"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 94.9,
+      "shipped_mode": "select",
+      "lead_only_auroc": 25.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "weibo",
+      "repeat": 0,
+      "selected": [
+        "linear_residual",
+        "density",
+        "community",
+        "attr_struct_mismatch"
+      ],
+      "lead": "linear_residual",
+      "shipped_auroc": 94.9,
+      "shipped_mode": "select",
+      "lead_only_auroc": 94.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "weibo",
+      "repeat": 1,
+      "selected": [
+        "linear_residual",
+        "attr_struct_mismatch",
+        "density",
+        "community"
+      ],
+      "lead": "linear_residual",
+      "shipped_auroc": 94.9,
+      "shipped_mode": "select",
+      "lead_only_auroc": 94.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "claude:sonnet",
+      "dataset": "weibo",
+      "repeat": 2,
+      "selected": [
+        "linear_residual",
+        "density",
+        "homophily_violation",
+        "community"
+      ],
+      "lead": "linear_residual",
+      "shipped_auroc": 94.9,
+      "shipped_mode": "select",
+      "lead_only_auroc": 94.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "weibo",
+      "repeat": 0,
+      "selected": [
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "linear_residual"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 94.9,
+      "shipped_mode": "select",
+      "lead_only_auroc": 83.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "weibo",
+      "repeat": 1,
+      "selected": [
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "linear_residual"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 94.9,
+      "shipped_mode": "select",
+      "lead_only_auroc": 83.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:12b",
+      "dataset": "weibo",
+      "repeat": 2,
+      "selected": [
+        "homophily_violation",
+        "attr_struct_mismatch",
+        "linear_residual"
+      ],
+      "lead": "homophily_violation",
+      "shipped_auroc": 94.9,
+      "shipped_mode": "select",
+      "lead_only_auroc": 83.0,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "weibo",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "community",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 67.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 25.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "weibo",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "community",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 67.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 25.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "gemma4:e2b",
+      "dataset": "weibo",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "homophily_violation",
+        "community",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 67.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 25.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "weibo",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 67.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 25.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "weibo",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 67.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 25.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "llama3.1:8b",
+      "dataset": "weibo",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 67.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 25.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "weibo",
+      "repeat": 0,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 67.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 25.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "weibo",
+      "repeat": 1,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 67.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 25.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "phi4:14b",
+      "dataset": "weibo",
+      "repeat": 2,
+      "selected": [
+        "local_affinity",
+        "community",
+        "homophily_violation",
+        "attr_struct_mismatch"
+      ],
+      "lead": "local_affinity",
+      "shipped_auroc": 67.1,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 25.7,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "weibo",
+      "repeat": 0,
+      "selected": [
+        "linear_residual",
+        "attr_struct_mismatch",
+        "homophily_violation"
+      ],
+      "lead": "linear_residual",
+      "shipped_auroc": 94.9,
+      "shipped_mode": "select",
+      "lead_only_auroc": 94.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "weibo",
+      "repeat": 1,
+      "selected": [
+        "linear_residual",
+        "attr_struct_mismatch",
+        "homophily_violation"
+      ],
+      "lead": "linear_residual",
+      "shipped_auroc": 94.9,
+      "shipped_mode": "select",
+      "lead_only_auroc": 94.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:4b",
+      "dataset": "weibo",
+      "repeat": 2,
+      "selected": [
+        "linear_residual",
+        "attr_struct_mismatch",
+        "homophily_violation"
+      ],
+      "lead": "linear_residual",
+      "shipped_auroc": 94.9,
+      "shipped_mode": "select",
+      "lead_only_auroc": 94.9,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "weibo",
+      "repeat": 0,
+      "selected": [
+        "attr_struct_mismatch",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 73.8,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 38.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "weibo",
+      "repeat": 1,
+      "selected": [
+        "attr_struct_mismatch",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 73.8,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 38.8,
+      "held_out": false
+    },
+    {
+      "pack": "study",
+      "model": "qwen3:8b",
+      "dataset": "weibo",
+      "repeat": 2,
+      "selected": [
+        "attr_struct_mismatch",
+        "community",
+        "homophily_violation"
+      ],
+      "lead": "attr_struct_mismatch",
+      "shipped_auroc": 73.8,
+      "shipped_mode": "aom",
+      "lead_only_auroc": 38.8,
+      "held_out": false
+    }
+  ]
+}

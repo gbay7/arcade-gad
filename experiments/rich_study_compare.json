@@ -1,0 +1,88 @@
+{
+  "model": "qwen3:8b",
+  "per_dataset": [
+    {
+      "dataset": "acm",
+      "shipped": 98.9,
+      "enriched": 86.7,
+      "n_shipped": 3,
+      "n_enriched": 3,
+      "selections_changed": 3
+    },
+    {
+      "dataset": "blogcatalog",
+      "shipped": 73.1,
+      "enriched": 78.9,
+      "n_shipped": 3,
+      "n_enriched": 3,
+      "selections_changed": 3
+    },
+    {
+      "dataset": "books",
+      "shipped": 72.1,
+      "enriched": 30.1,
+      "n_shipped": 3,
+      "n_enriched": 3,
+      "selections_changed": 3
+    },
+    {
+      "dataset": "cola_flickr",
+      "shipped": 76.5,
+      "enriched": 76.8,
+      "n_shipped": 3,
+      "n_enriched": 3,
+      "selections_changed": 3
+    },
+    {
+      "dataset": "disney",
+      "shipped": 86.4,
+      "enriched": 86.4,
+      "n_shipped": 3,
+      "n_enriched": 3,
+      "selections_changed": 3
+    },
+    {
+      "dataset": "enron",
+      "shipped": 83.7,
+      "enriched": 42.6,
+      "n_shipped": 3,
+      "n_enriched": 3,
+      "selections_changed": 3
+    },
+    {
+      "dataset": "inj_amazon",
+      "shipped": 86.0,
+      "enriched": 86.0,
+      "n_shipped": 3,
+      "n_enriched": 3,
+      "selections_changed": 3
+    },
+    {
+      "dataset": "inj_cora",
+      "shipped": 85.9,
+      "enriched": 90.5,
+      "n_shipped": 3,
+      "n_enriched": 3,
+      "selections_changed": 3
+    },
+    {
+      "dataset": "reddit",
+      "shipped": 60.4,
+      "enriched": 58.7,
+      "n_shipped": 3,
+      "n_enriched": 3,
+      "selections_changed": 3
+    },
+    {
+      "dataset": "weibo",
+      "shipped": 94.9,
+      "enriched": 94.9,
+      "n_shipped": 3,
+      "n_enriched": 3,
+      "selections_changed": 3
+    }
+  ],
+  "mean_shipped": 81.8,
+  "mean_enriched": 73.2,
+  "graphs_worse": 4
+}

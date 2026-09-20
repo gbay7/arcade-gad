@@ -1,0 +1,20 @@
+
+=== benchmark graphs (300 decisions, rule fires on 106) ===
+  acm            n= 27 fires= 11  shipped  84.3  with-rule  80.1   -4.2
+  blogcatalog    n= 27 fires=  9  shipped  65.8  with-rule  57.3   -8.5
+  books          n= 30 fires= 24  shipped  43.8  with-rule  42.4   -1.5
+  cola_flickr    n= 27 fires= 11  shipped  73.0  with-rule  68.7   -4.3
+  disney         n= 30 fires=  5  shipped  74.9  with-rule  67.7   -7.2
+  enron          n= 27 fires=  4  shipped  34.3  with-rule  35.5   +1.2
+  inj_amazon     n= 30 fires=  4  shipped  77.5  with-rule  76.7   -0.8
+  inj_cora       n= 36 fires=  3  shipped  91.7  with-rule  90.6   -1.1
+  reddit         n= 36 fires= 15  shipped  58.3  with-rule  58.7   +0.4
+  weibo          n= 30 fires= 20  shipped  82.7  with-rule  62.7  -20.0
+  MEAN           n=300  shipped  69.1  with-rule  64.6   -4.4  (worse on 8/10 graphs)
+
+=== held-out graphs (99 decisions, rule fires on 41) ===
+  amazon_fraud   n= 21 fires=  9  shipped  54.6  with-rule  57.4   +2.8
+  tolokers       n= 78 fires= 32  shipped  49.8  with-rule  47.0   -2.8
+  MEAN           n= 99  shipped  50.8  with-rule  49.2   -1.6  (worse on 1/2 graphs)
+
+AGREEMENT_RULE_DONE

@@ -1,0 +1,222 @@
+{
+  "Enron": {
+    "DOMINANT": {
+      "mean": 55.5,
+      "std": 1.1,
+      "n": 5
+    },
+    "AnomalyDAE": {
+      "mean": 48.4,
+      "std": 11.6,
+      "n": 5
+    },
+    "DONE": {
+      "mean": 41.1,
+      "std": 0.6,
+      "n": 5
+    },
+    "CoLA": {
+      "mean": 56.3,
+      "std": 3.3,
+      "n": 5
+    },
+    "GAAN": {
+      "mean": 49.2,
+      "std": 8.8,
+      "n": 5
+    },
+    "OCGNN": {
+      "mean": 57.6,
+      "std": 1.8,
+      "n": 5
+    }
+  },
+  "Reddit": {
+    "DOMINANT": {
+      "mean": 56.1,
+      "std": 0.0,
+      "n": 5
+    },
+    "AnomalyDAE": {
+      "mean": 49.0,
+      "std": 1.3,
+      "n": 5
+    },
+    "DONE": {
+      "mean": 53.3,
+      "std": 0.9,
+      "n": 5
+    },
+    "CoLA": {
+      "mean": 53.9,
+      "std": 2.3,
+      "n": 5
+    },
+    "GAAN": {
+      "mean": 49.3,
+      "std": 0.7,
+      "n": 5
+    },
+    "OCGNN": {
+      "mean": 50.6,
+      "std": 8.4,
+      "n": 5
+    }
+  },
+  "Books": {
+    "DOMINANT": {
+      "mean": 47.7,
+      "std": 2.3,
+      "n": 5
+    },
+    "AnomalyDAE": {
+      "mean": 41.9,
+      "std": 1.1,
+      "n": 5
+    },
+    "DONE": {
+      "mean": 37.6,
+      "std": 2.4,
+      "n": 5
+    },
+    "CoLA": {
+      "mean": 50.8,
+      "std": 5.8,
+      "n": 5
+    },
+    "GAAN": {
+      "mean": 50.3,
+      "std": 4.5,
+      "n": 5
+    },
+    "OCGNN": {
+      "mean": 50.9,
+      "std": 0.4,
+      "n": 5
+    }
+  },
+  "Disney": {
+    "DOMINANT": {
+      "mean": 59.7,
+      "std": 7.8,
+      "n": 5
+    },
+    "AnomalyDAE": {
+      "mean": 48.5,
+      "std": 0.1,
+      "n": 5
+    },
+    "DONE": {
+      "mean": 40.8,
+      "std": 0.6,
+      "n": 5
+    },
+    "CoLA": {
+      "mean": 50.5,
+      "std": 13.1,
+      "n": 5
+    },
+    "GAAN": {
+      "mean": 48.0,
+      "std": 0.0,
+      "n": 5
+    },
+    "OCGNN": {
+      "mean": 66.9,
+      "std": 0.6,
+      "n": 5
+    }
+  },
+  "Amazon": {
+    "DOMINANT": {
+      "mean": 71.8,
+      "std": 0.0,
+      "n": 5
+    },
+    "AnomalyDAE": {
+      "mean": 75.1,
+      "std": 0.0,
+      "n": 5
+    },
+    "DONE": {
+      "mean": 84.8,
+      "std": 3.1,
+      "n": 5
+    },
+    "CoLA": {
+      "mean": 60.9,
+      "std": 1.4,
+      "n": 5
+    },
+    "GAAN": {
+      "error": "/pytorch/aten/src/ATen/native/cuda/Loss.cu:95: operator(): b"
+    },
+    "OCGNN": {
+      "mean": 50.1,
+      "std": 0.1,
+      "n": 5
+    }
+  },
+  "Cora": {
+    "DOMINANT": {
+      "mean": 76.6,
+      "std": 0.4,
+      "n": 5
+    },
+    "AnomalyDAE": {
+      "mean": 71.4,
+      "std": 0.2,
+      "n": 5
+    },
+    "DONE": {
+      "mean": 84.3,
+      "std": 0.8,
+      "n": 5
+    },
+    "CoLA": {
+      "mean": 55.0,
+      "std": 2.7,
+      "n": 5
+    },
+    "GAAN": {
+      "error": "Compile with `TORCH_USE_CUDA_DSA` to enable device-side asse"
+    },
+    "OCGNN": {
+      "mean": 50.0,
+      "std": 0.0,
+      "n": 5
+    }
+  },
+  "Weibo": {
+    "DOMINANT": {
+      "mean": 90.0,
+      "std": 0.5,
+      "n": 5
+    },
+    "AnomalyDAE": {
+      "mean": 87.6,
+      "std": 1.1,
+      "n": 5
+    },
+    "DONE": {
+      "mean": 85.2,
+      "std": 0.2,
+      "n": 5
+    },
+    "CoLA": {
+      "mean": 24.0,
+      "std": 2.1,
+      "n": 5
+    },
+    "GAAN": {
+      "mean": 89.9,
+      "std": 0.0,
+      "n": 5
+    },
+    "OCGNN": {
+      "mean": 21.7,
+      "std": 2.6,
+      "n": 5
+    }
+  }
+}

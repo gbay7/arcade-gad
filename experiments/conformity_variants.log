@@ -1,0 +1,10 @@
+dataset      conformity neg.linres   neg.IF   dup   dim
+enron              83.7       41.6     64.8  0.57    18
+reddit             44.0       46.7     42.9  0.29    64
+books              51.2       54.4     47.8  0.00    21
+disney             33.6       48.2     55.8  0.00    28
+weibo              39.1        5.1     59.4  0.00   400
+inj_cora           29.2       50.8     64.2  0.06  1433
+inj_amazon         25.9       34.9     57.7  0.04   767
+tolokers           52.3       63.2     59.6  0.49    10
+VARIANTS_DONE

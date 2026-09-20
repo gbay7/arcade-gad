@@ -1,0 +1,120 @@
+{
+  "enron": {
+    "n": 13533,
+    "applicable": [
+      "reconstruction",
+      "local_affinity",
+      "contrastive",
+      "adversarial",
+      "one_class",
+      "density",
+      "community",
+      "homophily_violation",
+      "spectral",
+      "attr_struct_mismatch",
+      "conformity"
+    ],
+    "run_everything": {
+      "wall_s": 35.4,
+      "peak_gb": 0.0
+    },
+    "analyst_evidence": {
+      "wall_s": 0.3,
+      "peak_gb": 0.0
+    },
+    "analyst_selected": {
+      "wall_s": 0.0,
+      "peak_gb": 0.0
+    },
+    "analyst_selection": [
+      "conformity",
+      "homophily_violation",
+      "spectral"
+    ],
+    "analyst_decision_s": 239.7,
+    "analyst_total_s": 240.0,
+    "slgad": {
+      "wall_s": 598.8,
+      "peak_gb": 0.71
+    }
+  },
+  "inj_amazon": {
+    "n": 13752,
+    "applicable": [
+      "reconstruction",
+      "local_affinity",
+      "contrastive",
+      "adversarial",
+      "subgraph_contrast",
+      "one_class",
+      "density",
+      "community",
+      "homophily_violation",
+      "spectral",
+      "attr_struct_mismatch"
+    ],
+    "run_everything": {
+      "wall_s": 304.2,
+      "peak_gb": 0.86
+    },
+    "analyst_evidence": {
+      "wall_s": 8.2,
+      "peak_gb": 0.86
+    },
+    "analyst_selected": {
+      "wall_s": 118.6,
+      "peak_gb": 0.86
+    },
+    "analyst_selection": [
+      "community",
+      "local_affinity",
+      "subgraph_contrast"
+    ],
+    "analyst_decision_s": 129.4,
+    "analyst_total_s": 256.2,
+    "slgad": {
+      "wall_s": 484.8,
+      "peak_gb": 0.86
+    }
+  },
+  "acm": {
+    "n": 16484,
+    "applicable": [
+      "reconstruction",
+      "local_affinity",
+      "contrastive",
+      "adversarial",
+      "subgraph_contrast",
+      "one_class",
+      "density",
+      "community",
+      "homophily_violation",
+      "spectral",
+      "attr_struct_mismatch",
+      "clique_density"
+    ],
+    "run_everything": {
+      "wall_s": 837.2,
+      "peak_gb": 2.63
+    },
+    "analyst_evidence": {
+      "wall_s": 55.5,
+      "peak_gb": 2.63
+    },
+    "analyst_selected": {
+      "wall_s": 403.8,
+      "peak_gb": 2.63
+    },
+    "analyst_selection": [
+      "clique_density",
+      "homophily_violation",
+      "subgraph_contrast"
+    ],
+    "analyst_decision_s": 105.1,
+    "analyst_total_s": 564.4,
+    "slgad": {
+      "wall_s": 764.1,
+      "peak_gb": 2.63
+    }
+  }
+}

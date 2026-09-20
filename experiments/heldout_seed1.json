@@ -1,0 +1,26 @@
+{
+  "questions": {
+    "seed": 1,
+    "n_nodes": 48921,
+    "anomaly_rate": 2.98,
+    "ARCADE_seed1": {
+      "auroc": 49.5,
+      "auprc": 3.6,
+      "mode": "aom",
+      "trusted": null
+    },
+    "per_detector": {
+      "reconstruction": 62.4,
+      "density": 55.6,
+      "one_class": 50.4,
+      "spectral": 49.4,
+      "community": 49.3,
+      "subgraph_contrast": 48.6,
+      "attr_struct_mismatch": 48.3,
+      "local_affinity": 45.3,
+      "adversarial": 44.8,
+      "contrastive": 44.3,
+      "homophily_violation": 44.3
+    }
+  }
+}

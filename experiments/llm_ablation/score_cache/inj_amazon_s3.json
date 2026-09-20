@@ -1,0 +1,43 @@
+{
+  "dataset": "inj_amazon",
+  "seed": 3,
+  "applicable": [
+    "reconstruction",
+    "local_affinity",
+    "contrastive",
+    "adversarial",
+    "subgraph_contrast",
+    "one_class",
+    "density",
+    "community",
+    "homophily_violation",
+    "spectral",
+    "attr_struct_mismatch"
+  ],
+  "cached": [
+    "adversarial",
+    "attr_struct_mismatch",
+    "community",
+    "contrastive",
+    "density",
+    "homophily_violation",
+    "local_affinity",
+    "one_class",
+    "reconstruction",
+    "spectral",
+    "subgraph_contrast"
+  ],
+  "timings_s": {
+    "reconstruction": 64.2,
+    "local_affinity": 0.2,
+    "contrastive": 42.1,
+    "adversarial": 18.6,
+    "subgraph_contrast": 109.0,
+    "one_class": 19.2,
+    "density": 1.4,
+    "community": 0.1,
+    "homophily_violation": 0.1,
+    "spectral": 0.1,
+    "attr_struct_mismatch": 1.4
+  }
+}

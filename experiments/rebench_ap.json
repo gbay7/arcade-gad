@@ -1,0 +1,389 @@
+{
+  "Enron|DOMINANT": {
+    "mean": 55.6,
+    "std": 1.2,
+    "ap_mean": 0.1,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Enron|AnomalyDAE": {
+    "mean": 48.6,
+    "std": 11.4,
+    "ap_mean": 0.0,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Enron|DONE": {
+    "mean": 41.0,
+    "std": 0.9,
+    "ap_mean": 0.1,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Enron|CoLA": {
+    "mean": 55.2,
+    "std": 4.1,
+    "ap_mean": 0.1,
+    "ap_std": 0.1,
+    "n": 5
+  },
+  "Enron|GAAN": {
+    "mean": 49.2,
+    "std": 8.8,
+    "ap_mean": 0.0,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Enron|OCGNN": {
+    "mean": 57.0,
+    "std": 2.5,
+    "ap_mean": 0.1,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Reddit|DOMINANT": {
+    "mean": 56.1,
+    "std": 0.0,
+    "ap_mean": 3.7,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Reddit|AnomalyDAE": {
+    "mean": 49.6,
+    "std": 1.7,
+    "ap_mean": 3.2,
+    "ap_std": 0.1,
+    "n": 5
+  },
+  "Reddit|DONE": {
+    "mean": 53.3,
+    "std": 2.3,
+    "ap_mean": 3.8,
+    "ap_std": 0.2,
+    "n": 5
+  },
+  "Reddit|CoLA": {
+    "mean": 54.1,
+    "std": 2.8,
+    "ap_mean": 4.1,
+    "ap_std": 0.4,
+    "n": 5
+  },
+  "Reddit|GAAN": {
+    "mean": 49.3,
+    "std": 0.7,
+    "ap_mean": 3.4,
+    "ap_std": 0.2,
+    "n": 5
+  },
+  "Reddit|OCGNN": {
+    "mean": 42.8,
+    "std": 4.4,
+    "ap_mean": 3.1,
+    "ap_std": 0.6,
+    "n": 5
+  },
+  "Books|DOMINANT": {
+    "mean": 47.6,
+    "std": 2.2,
+    "ap_mean": 1.8,
+    "ap_std": 0.1,
+    "n": 5
+  },
+  "Books|AnomalyDAE": {
+    "mean": 41.5,
+    "std": 0.7,
+    "ap_mean": 1.7,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Books|DONE": {
+    "mean": 37.2,
+    "std": 2.1,
+    "ap_mean": 1.8,
+    "ap_std": 0.7,
+    "n": 5
+  },
+  "Books|CoLA": {
+    "mean": 50.9,
+    "std": 5.7,
+    "ap_mean": 2.3,
+    "ap_std": 0.7,
+    "n": 5
+  },
+  "Books|GAAN": {
+    "mean": 50.3,
+    "std": 4.5,
+    "ap_mean": 2.1,
+    "ap_std": 0.2,
+    "n": 5
+  },
+  "Books|OCGNN": {
+    "mean": 50.9,
+    "std": 0.5,
+    "ap_mean": 2.0,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Disney|DOMINANT": {
+    "mean": 59.7,
+    "std": 7.8,
+    "ap_mean": 7.5,
+    "ap_std": 2.3,
+    "n": 5
+  },
+  "Disney|AnomalyDAE": {
+    "mean": 48.5,
+    "std": 0.1,
+    "ap_mean": 5.7,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Disney|DONE": {
+    "mean": 40.7,
+    "std": 0.9,
+    "ap_mean": 4.5,
+    "ap_std": 0.1,
+    "n": 5
+  },
+  "Disney|CoLA": {
+    "mean": 45.8,
+    "std": 9.5,
+    "ap_mean": 5.4,
+    "ap_std": 1.0,
+    "n": 5
+  },
+  "Disney|GAAN": {
+    "mean": 48.0,
+    "std": 0.0,
+    "ap_mean": 5.6,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Disney|OCGNN": {
+    "mean": 66.9,
+    "std": 0.6,
+    "ap_mean": 7.8,
+    "ap_std": 0.1,
+    "n": 5
+  },
+  "Weibo|DOMINANT": {
+    "mean": 90.0,
+    "std": 0.5,
+    "ap_mean": 25.5,
+    "ap_std": 0.7,
+    "n": 5
+  },
+  "Weibo|AnomalyDAE": {
+    "mean": 87.5,
+    "std": 1.0,
+    "ap_mean": 29.9,
+    "ap_std": 0.9,
+    "n": 5
+  },
+  "Weibo|DONE": {
+    "mean": 85.2,
+    "std": 0.2,
+    "ap_mean": 29.8,
+    "ap_std": 0.2,
+    "n": 5
+  },
+  "Weibo|CoLA": {
+    "mean": 23.3,
+    "std": 1.9,
+    "ap_mean": 2.9,
+    "ap_std": 0.2,
+    "n": 5
+  },
+  "Weibo|GAAN": {
+    "mean": 89.9,
+    "std": 0.0,
+    "ap_mean": 32.2,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Weibo|OCGNN": {
+    "mean": 21.7,
+    "std": 2.6,
+    "ap_mean": 2.7,
+    "ap_std": 0.2,
+    "n": 5
+  },
+  "Amazon|DOMINANT": {
+    "mean": 71.8,
+    "std": 0.0,
+    "ap_mean": 12.2,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Amazon|AnomalyDAE": {
+    "mean": 75.1,
+    "std": 0.0,
+    "ap_mean": 35.2,
+    "ap_std": 0.1,
+    "n": 5
+  },
+  "Amazon|DONE": {
+    "mean": 85.3,
+    "std": 1.3,
+    "ap_mean": 22.5,
+    "ap_std": 4.0,
+    "n": 5
+  },
+  "Amazon|CoLA": {
+    "mean": 60.6,
+    "std": 1.4,
+    "ap_mean": 10.3,
+    "ap_std": 0.7,
+    "n": 5
+  },
+  "Amazon|GAAN": {
+    "error": "/pytorch/aten/src/ATen/native/cuda/Loss.cu:95: operator(): block: [29972,0,0], thread: [21,0,0] Assertion `target_val >="
+  },
+  "Amazon|OCGNN": {
+    "mean": 50.1,
+    "std": 0.0,
+    "ap_mean": 5.2,
+    "ap_std": 0.1,
+    "n": 5
+  },
+  "Cora|DOMINANT": {
+    "mean": 76.6,
+    "std": 0.4,
+    "ap_mean": 18.3,
+    "ap_std": 0.7,
+    "n": 5
+  },
+  "Cora|AnomalyDAE": {
+    "mean": 71.4,
+    "std": 0.2,
+    "ap_mean": 14.0,
+    "ap_std": 0.3,
+    "n": 5
+  },
+  "Cora|DONE": {
+    "mean": 84.8,
+    "std": 0.4,
+    "ap_mean": 32.3,
+    "ap_std": 1.2,
+    "n": 5
+  },
+  "Cora|CoLA": {
+    "mean": 55.0,
+    "std": 2.7,
+    "ap_mean": 6.0,
+    "ap_std": 0.8,
+    "n": 5
+  },
+  "Cora|GAAN": {
+    "error": "/pytorch/aten/src/ATen/native/cuda/Loss.cu:95: operator(): block: [8378,0,0], thread: [53,0,0] Assertion `target_val >= "
+  },
+  "Cora|OCGNN": {
+    "mean": 50.0,
+    "std": 0.0,
+    "ap_mean": 5.1,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "BlogCatalog|CoLA": {
+    "mean": 49.4,
+    "std": 3.2,
+    "ap_mean": 7.0,
+    "ap_std": 0.8,
+    "n": 5
+  },
+  "ACM|CoLA": {
+    "mean": 46.5,
+    "std": 1.6,
+    "ap_mean": 3.7,
+    "ap_std": 0.2,
+    "n": 5
+  },
+  "Flickr|CoLA": {
+    "mean": 49.1,
+    "std": 2.0,
+    "ap_mean": 6.9,
+    "ap_std": 0.7,
+    "n": 5
+  },
+  "Enron|SL-GAD": {
+    "mean": 53.1,
+    "std": 3.2,
+    "ap_mean": 0.0,
+    "ap_std": 0.0,
+    "rounds": 128,
+    "n": 5
+  },
+  "Reddit|SL-GAD": {
+    "mean": 53.7,
+    "std": 1.5,
+    "ap_mean": 3.4,
+    "ap_std": 0.1,
+    "rounds": 128,
+    "n": 5
+  },
+  "Books|SL-GAD": {
+    "mean": 53.6,
+    "std": 3.8,
+    "ap_mean": 3.1,
+    "ap_std": 0.6,
+    "rounds": 128,
+    "n": 5
+  },
+  "Disney|SL-GAD": {
+    "mean": 58.9,
+    "std": 3.5,
+    "ap_mean": 6.8,
+    "ap_std": 0.3,
+    "rounds": 128,
+    "n": 5
+  },
+  "Weibo|SL-GAD": {
+    "mean": 49.9,
+    "std": 1.3,
+    "ap_mean": 14.1,
+    "ap_std": 0.7,
+    "rounds": 128,
+    "n": 5
+  },
+  "Amazon|SL-GAD": {
+    "mean": 92.9,
+    "std": 1.1,
+    "ap_mean": 55.4,
+    "ap_std": 3.2,
+    "rounds": 128,
+    "n": 5
+  },
+  "Cora|SL-GAD": {
+    "mean": 86.4,
+    "std": 1.4,
+    "ap_mean": 26.9,
+    "ap_std": 3.0,
+    "rounds": 128,
+    "n": 5
+  },
+  "BlogCatalog|SL-GAD": {
+    "mean": 77.4,
+    "std": 0.2,
+    "ap_mean": 39.3,
+    "ap_std": 0.1,
+    "rounds": 256,
+    "n": 5
+  },
+  "ACM|SL-GAD": {
+    "mean": 80.6,
+    "std": 0.8,
+    "ap_mean": 39.9,
+    "ap_std": 1.7,
+    "rounds": 256,
+    "n": 5
+  },
+  "Flickr|SL-GAD": {
+    "mean": 78.5,
+    "std": 0.2,
+    "ap_mean": 42.5,
+    "ap_std": 0.1,
+    "rounds": 256,
+    "n": 5
+  }
+}

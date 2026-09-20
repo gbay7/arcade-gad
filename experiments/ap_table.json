@@ -1,0 +1,112 @@
+{
+  "Enron": {
+    "DOMINANT": 0.1,
+    "AnomalyDAE": 0.0,
+    "DONE": 0.1,
+    "CoLA": 0.1,
+    "GAAN": 0.0,
+    "OCGNN": 0.1,
+    "SL-GAD": 0.0,
+    "AutoGAD": null,
+    "ARCADE": 1.4
+  },
+  "Reddit": {
+    "DOMINANT": 3.7,
+    "AnomalyDAE": 3.2,
+    "DONE": 3.8,
+    "CoLA": 4.1,
+    "GAAN": 3.4,
+    "OCGNN": 3.1,
+    "SL-GAD": 3.4,
+    "AutoGAD": null,
+    "ARCADE": 4.4
+  },
+  "Books": {
+    "DOMINANT": 1.8,
+    "AnomalyDAE": 1.7,
+    "DONE": 1.8,
+    "CoLA": 2.3,
+    "GAAN": 2.1,
+    "OCGNN": 2.0,
+    "SL-GAD": 3.1,
+    "AutoGAD": null,
+    "ARCADE": 5.2
+  },
+  "Disney": {
+    "DOMINANT": 7.5,
+    "AnomalyDAE": 5.7,
+    "DONE": 4.5,
+    "CoLA": 5.4,
+    "GAAN": 5.6,
+    "OCGNN": 7.8,
+    "SL-GAD": 6.8,
+    "AutoGAD": null,
+    "ARCADE": 30.7
+  },
+  "Weibo": {
+    "DOMINANT": 25.5,
+    "AnomalyDAE": 29.9,
+    "DONE": 29.8,
+    "CoLA": 2.9,
+    "GAAN": 32.2,
+    "OCGNN": 2.7,
+    "SL-GAD": 14.1,
+    "AutoGAD": null,
+    "ARCADE": 34.8
+  },
+  "Cora": {
+    "DOMINANT": 18.3,
+    "AnomalyDAE": 14.0,
+    "DONE": 32.3,
+    "CoLA": 6.0,
+    "GAAN": null,
+    "OCGNN": 5.1,
+    "SL-GAD": 26.9,
+    "AutoGAD": null,
+    "ARCADE": 61.7
+  },
+  "Amazon": {
+    "DOMINANT": 12.2,
+    "AnomalyDAE": 35.2,
+    "DONE": 22.5,
+    "CoLA": 10.3,
+    "GAAN": null,
+    "OCGNN": 5.2,
+    "SL-GAD": 55.4,
+    "AutoGAD": null,
+    "ARCADE": 17.4
+  },
+  "BlogCatalog": {
+    "DOMINANT": null,
+    "AnomalyDAE": 37.0,
+    "DONE": 28.6,
+    "CoLA": 7.0,
+    "GAAN": 6.0,
+    "OCGNN": 7.3,
+    "SL-GAD": 39.3,
+    "AutoGAD": 32.25,
+    "ARCADE": 24.1
+  },
+  "ACM": {
+    "DOMINANT": null,
+    "AnomalyDAE": 26.3,
+    "DONE": 22.7,
+    "CoLA": 3.7,
+    "GAAN": 3.8,
+    "OCGNN": 3.7,
+    "SL-GAD": 39.9,
+    "AutoGAD": 25.96,
+    "ARCADE": 80.5
+  },
+  "Flickr": {
+    "DOMINANT": null,
+    "AnomalyDAE": 39.9,
+    "DONE": 35.0,
+    "CoLA": 6.9,
+    "GAAN": 6.0,
+    "OCGNN": 5.9,
+    "SL-GAD": 42.5,
+    "AutoGAD": null,
+    "ARCADE": 25.2
+  }
+}

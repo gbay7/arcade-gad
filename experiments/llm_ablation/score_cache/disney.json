@@ -1,0 +1,40 @@
+{
+  "dataset": "disney",
+  "seed": 1,
+  "applicable": [
+    "reconstruction",
+    "local_affinity",
+    "contrastive",
+    "one_class",
+    "density",
+    "community",
+    "homophily_violation",
+    "spectral",
+    "attr_struct_mismatch",
+    "peripheral_mismatch"
+  ],
+  "cached": [
+    "attr_struct_mismatch",
+    "community",
+    "contrastive",
+    "density",
+    "homophily_violation",
+    "local_affinity",
+    "one_class",
+    "peripheral_mismatch",
+    "reconstruction",
+    "spectral"
+  ],
+  "timings_s": {
+    "reconstruction": 0.1,
+    "local_affinity": 0.0,
+    "contrastive": 0.2,
+    "one_class": 0.1,
+    "density": 0.0,
+    "community": 0.0,
+    "homophily_violation": 0.0,
+    "spectral": 0.1,
+    "attr_struct_mismatch": 0.1,
+    "peripheral_mismatch": 0.0
+  }
+}

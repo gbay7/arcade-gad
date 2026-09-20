@@ -1,0 +1,4 @@
+# superseded 128-round caches (pre uniform-256-round protocol)
+score_cache_128rounds/
+run_*.log
+REPORT.md

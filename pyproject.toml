@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "arcade"
+version = "1.0.0"
+description = "ARCADE: Adaptive Reasoned Composition for Anomaly Detection in Graphs"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "torch>=2.0",
+    "torch-geometric>=2.4",
+    "scikit-learn>=1.2",
+    "networkx>=3.0",
+    "numpy>=1.24",
+    "scipy>=1.10",
+]
+
+[project.scripts]
+arcade-server = "arcade.server:main"

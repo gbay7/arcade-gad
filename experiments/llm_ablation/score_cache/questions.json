@@ -1,0 +1,43 @@
+{
+  "dataset": "questions",
+  "seed": 1,
+  "applicable": [
+    "reconstruction",
+    "local_affinity",
+    "contrastive",
+    "adversarial",
+    "subgraph_contrast",
+    "one_class",
+    "density",
+    "community",
+    "homophily_violation",
+    "spectral",
+    "attr_struct_mismatch"
+  ],
+  "cached": [
+    "adversarial",
+    "attr_struct_mismatch",
+    "community",
+    "contrastive",
+    "density",
+    "homophily_violation",
+    "local_affinity",
+    "one_class",
+    "reconstruction",
+    "spectral",
+    "subgraph_contrast"
+  ],
+  "timings_s": {
+    "reconstruction": 40.7,
+    "local_affinity": 0.1,
+    "contrastive": 52.2,
+    "adversarial": 19.6,
+    "subgraph_contrast": 4531.9,
+    "one_class": 17.5,
+    "density": 6.5,
+    "community": 0.1,
+    "homophily_violation": 0.1,
+    "spectral": 0.1,
+    "attr_struct_mismatch": 6.4
+  }
+}

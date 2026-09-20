@@ -1,0 +1,43 @@
+{
+  "dataset": "books",
+  "seed": 4,
+  "applicable": [
+    "reconstruction",
+    "local_affinity",
+    "contrastive",
+    "adversarial",
+    "one_class",
+    "density",
+    "community",
+    "homophily_violation",
+    "spectral",
+    "attr_struct_mismatch",
+    "attribute_inflation"
+  ],
+  "cached": [
+    "adversarial",
+    "attr_struct_mismatch",
+    "attribute_inflation",
+    "community",
+    "contrastive",
+    "density",
+    "homophily_violation",
+    "local_affinity",
+    "one_class",
+    "reconstruction",
+    "spectral"
+  ],
+  "timings_s": {
+    "reconstruction": 0.2,
+    "local_affinity": 0.0,
+    "contrastive": 0.4,
+    "adversarial": 0.2,
+    "one_class": 0.2,
+    "density": 0.0,
+    "community": 0.0,
+    "homophily_violation": 0.0,
+    "spectral": 0.3,
+    "attr_struct_mismatch": 0.1,
+    "attribute_inflation": 0.0
+  }
+}

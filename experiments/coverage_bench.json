@@ -1,0 +1,532 @@
+{
+  "enron": {
+    "auroc_mean": 83.7,
+    "auroc_std": 0.0,
+    "auprc_mean": 1.4,
+    "auprc_std": 0.0,
+    "seeds": [
+      {
+        "seed": 1,
+        "auroc": 83.7,
+        "auprc": 1.4,
+        "mode": "select",
+        "trusted": [
+          "conformity"
+        ]
+      },
+      {
+        "seed": 2,
+        "auroc": 83.7,
+        "auprc": 1.4,
+        "mode": "select",
+        "trusted": [
+          "conformity"
+        ]
+      },
+      {
+        "seed": 3,
+        "auroc": 83.7,
+        "auprc": 1.4,
+        "mode": "select",
+        "trusted": [
+          "conformity"
+        ]
+      },
+      {
+        "seed": 4,
+        "auroc": 83.7,
+        "auprc": 1.4,
+        "mode": "select",
+        "trusted": [
+          "conformity"
+        ]
+      },
+      {
+        "seed": 5,
+        "auroc": 83.7,
+        "auprc": 1.4,
+        "mode": "select",
+        "trusted": [
+          "conformity"
+        ]
+      }
+    ]
+  },
+  "reddit": {
+    "auroc_mean": 59.8,
+    "auroc_std": 0.7,
+    "auprc_mean": 4.4,
+    "auprc_std": 0.1,
+    "seeds": [
+      {
+        "seed": 1,
+        "auroc": 60.8,
+        "auprc": 4.5,
+        "mode": "aom",
+        "trusted": null
+      },
+      {
+        "seed": 2,
+        "auroc": 59.8,
+        "auprc": 4.4,
+        "mode": "aom",
+        "trusted": null
+      },
+      {
+        "seed": 3,
+        "auroc": 58.9,
+        "auprc": 4.2,
+        "mode": "aom",
+        "trusted": null
+      },
+      {
+        "seed": 4,
+        "auroc": 59.3,
+        "auprc": 4.3,
+        "mode": "aom",
+        "trusted": null
+      },
+      {
+        "seed": 5,
+        "auroc": 60.2,
+        "auprc": 4.4,
+        "mode": "aom",
+        "trusted": null
+      }
+    ]
+  },
+  "books": {
+    "auroc_mean": 72.1,
+    "auroc_std": 0.0,
+    "auprc_mean": 5.2,
+    "auprc_std": 0.0,
+    "seeds": [
+      {
+        "seed": 1,
+        "auroc": 72.1,
+        "auprc": 5.2,
+        "mode": "select",
+        "trusted": [
+          "attribute_inflation"
+        ]
+      },
+      {
+        "seed": 2,
+        "auroc": 72.1,
+        "auprc": 5.2,
+        "mode": "select",
+        "trusted": [
+          "attribute_inflation"
+        ]
+      },
+      {
+        "seed": 3,
+        "auroc": 72.1,
+        "auprc": 5.2,
+        "mode": "select",
+        "trusted": [
+          "attribute_inflation"
+        ]
+      },
+      {
+        "seed": 4,
+        "auroc": 72.1,
+        "auprc": 5.2,
+        "mode": "select",
+        "trusted": [
+          "attribute_inflation"
+        ]
+      },
+      {
+        "seed": 5,
+        "auroc": 72.1,
+        "auprc": 5.2,
+        "mode": "select",
+        "trusted": [
+          "attribute_inflation"
+        ]
+      }
+    ]
+  },
+  "disney": {
+    "auroc_mean": 86.4,
+    "auroc_std": 0.0,
+    "auprc_mean": 30.7,
+    "auprc_std": 0.0,
+    "seeds": [
+      {
+        "seed": 1,
+        "auroc": 86.4,
+        "auprc": 30.7,
+        "mode": "select",
+        "trusted": [
+          "peripheral_mismatch"
+        ]
+      },
+      {
+        "seed": 2,
+        "auroc": 86.4,
+        "auprc": 30.7,
+        "mode": "select",
+        "trusted": [
+          "peripheral_mismatch"
+        ]
+      },
+      {
+        "seed": 3,
+        "auroc": 86.4,
+        "auprc": 30.7,
+        "mode": "select",
+        "trusted": [
+          "peripheral_mismatch"
+        ]
+      },
+      {
+        "seed": 4,
+        "auroc": 86.4,
+        "auprc": 30.7,
+        "mode": "select",
+        "trusted": [
+          "peripheral_mismatch"
+        ]
+      },
+      {
+        "seed": 5,
+        "auroc": 86.4,
+        "auprc": 30.7,
+        "mode": "select",
+        "trusted": [
+          "peripheral_mismatch"
+        ]
+      }
+    ]
+  },
+  "weibo": {
+    "auroc_mean": 94.9,
+    "auroc_std": 0.0,
+    "auprc_mean": 34.8,
+    "auprc_std": 0.0,
+    "seeds": [
+      {
+        "seed": 1,
+        "auroc": 94.9,
+        "auprc": 34.8,
+        "mode": "select",
+        "trusted": [
+          "linear_residual"
+        ]
+      },
+      {
+        "seed": 2,
+        "auroc": 94.9,
+        "auprc": 34.8,
+        "mode": "select",
+        "trusted": [
+          "linear_residual"
+        ]
+      },
+      {
+        "seed": 3,
+        "auroc": 94.9,
+        "auprc": 34.8,
+        "mode": "select",
+        "trusted": [
+          "linear_residual"
+        ]
+      },
+      {
+        "seed": 4,
+        "auroc": 94.9,
+        "auprc": 34.8,
+        "mode": "select",
+        "trusted": [
+          "linear_residual"
+        ]
+      },
+      {
+        "seed": 5,
+        "auroc": 94.9,
+        "auprc": 34.8,
+        "mode": "select",
+        "trusted": [
+          "linear_residual"
+        ]
+      }
+    ]
+  },
+  "inj_cora": {
+    "auroc_mean": 93.6,
+    "auroc_std": 0.0,
+    "auprc_mean": 61.7,
+    "auprc_std": 0.0,
+    "seeds": [
+      {
+        "seed": 1,
+        "auroc": 93.6,
+        "auprc": 61.7,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "local_affinity"
+        ]
+      },
+      {
+        "seed": 2,
+        "auroc": 93.6,
+        "auprc": 61.7,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "local_affinity"
+        ]
+      },
+      {
+        "seed": 3,
+        "auroc": 93.6,
+        "auprc": 61.7,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "local_affinity"
+        ]
+      },
+      {
+        "seed": 4,
+        "auroc": 93.6,
+        "auprc": 61.7,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "local_affinity"
+        ]
+      },
+      {
+        "seed": 5,
+        "auroc": 93.6,
+        "auprc": 61.7,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "local_affinity"
+        ]
+      }
+    ]
+  },
+  "inj_amazon": {
+    "auroc_mean": 73.2,
+    "auroc_std": 0.1,
+    "auprc_mean": 17.4,
+    "auprc_std": 0.3,
+    "seeds": [
+      {
+        "seed": 1,
+        "auroc": 73.3,
+        "auprc": 17.3,
+        "mode": "aom",
+        "trusted": null
+      },
+      {
+        "seed": 2,
+        "auroc": 73.0,
+        "auprc": 17.6,
+        "mode": "aom",
+        "trusted": null
+      },
+      {
+        "seed": 3,
+        "auroc": 73.3,
+        "auprc": 16.8,
+        "mode": "aom",
+        "trusted": null
+      },
+      {
+        "seed": 4,
+        "auroc": 73.1,
+        "auprc": 17.5,
+        "mode": "aom",
+        "trusted": null
+      },
+      {
+        "seed": 5,
+        "auroc": 73.3,
+        "auprc": 17.7,
+        "mode": "aom",
+        "trusted": null
+      }
+    ]
+  },
+  "blogcatalog": {
+    "auroc_mean": 78.9,
+    "auroc_std": 0.1,
+    "auprc_mean": 24.1,
+    "auprc_std": 0.1,
+    "seeds": [
+      {
+        "seed": 1,
+        "auroc": 78.9,
+        "auprc": 24.0,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      },
+      {
+        "seed": 2,
+        "auroc": 79.1,
+        "auprc": 24.2,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      },
+      {
+        "seed": 3,
+        "auroc": 78.8,
+        "auprc": 24.2,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      },
+      {
+        "seed": 4,
+        "auroc": 78.8,
+        "auprc": 24.2,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      },
+      {
+        "seed": 5,
+        "auroc": 79.1,
+        "auprc": 24.0,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      }
+    ]
+  },
+  "acm": {
+    "auroc_mean": 98.9,
+    "auroc_std": 0.1,
+    "auprc_mean": 80.5,
+    "auprc_std": 1.4,
+    "seeds": [
+      {
+        "seed": 1,
+        "auroc": 98.9,
+        "auprc": 82.6,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      },
+      {
+        "seed": 2,
+        "auroc": 98.8,
+        "auprc": 80.3,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      },
+      {
+        "seed": 3,
+        "auroc": 99.0,
+        "auprc": 81.4,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      },
+      {
+        "seed": 4,
+        "auroc": 98.8,
+        "auprc": 78.6,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      },
+      {
+        "seed": 5,
+        "auroc": 98.8,
+        "auprc": 79.5,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      }
+    ]
+  },
+  "cola_flickr": {
+    "auroc_mean": 76.8,
+    "auroc_std": 0.3,
+    "auprc_mean": 25.2,
+    "auprc_std": 0.2,
+    "seeds": [
+      {
+        "seed": 1,
+        "auroc": 76.5,
+        "auprc": 25.1,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      },
+      {
+        "seed": 2,
+        "auroc": 76.7,
+        "auprc": 25.1,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      },
+      {
+        "seed": 3,
+        "auroc": 76.4,
+        "auprc": 24.9,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      },
+      {
+        "seed": 4,
+        "auroc": 77.0,
+        "auprc": 25.3,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      },
+      {
+        "seed": 5,
+        "auroc": 77.2,
+        "auprc": 25.4,
+        "mode": "pairmax",
+        "trusted": [
+          "clique_density",
+          "subgraph_contrast"
+        ]
+      }
+    ]
+  }
+}

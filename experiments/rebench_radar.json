@@ -1,0 +1,57 @@
+{
+  "Enron": {
+    "mean": 48.7,
+    "std": 0.0,
+    "ap_mean": 0.0,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Reddit": {
+    "mean": 49.1,
+    "std": 0.0,
+    "ap_mean": 3.2,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Books": {
+    "mean": 45.6,
+    "std": 0.0,
+    "ap_mean": 2.2,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Disney": {
+    "mean": 51.8,
+    "std": 0.0,
+    "ap_mean": 7.2,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Weibo": {
+    "mean": 95.1,
+    "std": 0.0,
+    "ap_mean": 35.0,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Cora": {
+    "mean": 50.2,
+    "std": 0.0,
+    "ap_mean": 4.8,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "Amazon": {
+    "mean": 48.4,
+    "std": 0.0,
+    "ap_mean": 5.0,
+    "ap_std": 0.0,
+    "n": 5
+  },
+  "BlogCatalog": {
+    "error": "?"
+  },
+  "ACM": {
+    "error": "?"
+  }
+}

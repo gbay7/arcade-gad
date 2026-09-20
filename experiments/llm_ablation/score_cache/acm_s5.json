@@ -1,0 +1,46 @@
+{
+  "dataset": "acm",
+  "seed": 5,
+  "applicable": [
+    "reconstruction",
+    "local_affinity",
+    "contrastive",
+    "adversarial",
+    "subgraph_contrast",
+    "one_class",
+    "density",
+    "community",
+    "homophily_violation",
+    "spectral",
+    "attr_struct_mismatch",
+    "clique_density"
+  ],
+  "cached": [
+    "adversarial",
+    "attr_struct_mismatch",
+    "clique_density",
+    "community",
+    "contrastive",
+    "density",
+    "homophily_violation",
+    "local_affinity",
+    "one_class",
+    "reconstruction",
+    "spectral",
+    "subgraph_contrast"
+  ],
+  "timings_s": {
+    "reconstruction": 70.9,
+    "local_affinity": 1.2,
+    "contrastive": 217.6,
+    "adversarial": 75.7,
+    "subgraph_contrast": 409.2,
+    "one_class": 16.2,
+    "density": 12.4,
+    "community": 1.0,
+    "homophily_violation": 1.0,
+    "spectral": 0.6,
+    "attr_struct_mismatch": 13.7,
+    "clique_density": 0.6
+  }
+}

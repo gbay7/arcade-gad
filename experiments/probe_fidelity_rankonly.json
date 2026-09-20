@@ -1,0 +1,358 @@
+{
+ "disney": {
+  "reconstruction": {
+   "full_auroc": 42.4,
+   "probe5_auroc": 44.4,
+   "probe5_to_full_spearman": 0.737,
+   "probe5_seconds": 0.1,
+   "probe20_auroc": 40.3,
+   "probe20_to_full_spearman": 0.951,
+   "probe20_seconds": 0.0,
+   "budget5_to_budget20_spearman": 0.71
+  },
+  "contrastive": {
+   "full_auroc": 64.1,
+   "probe5_auroc": 54.7,
+   "probe5_to_full_spearman": 0.133,
+   "probe5_seconds": 0.0,
+   "probe20_auroc": 44.0,
+   "probe20_to_full_spearman": 0.106,
+   "probe20_seconds": 0.0,
+   "budget5_to_budget20_spearman": 0.075
+  },
+  "one_class": {
+   "full_auroc": 60.3,
+   "probe5_auroc": 56.6,
+   "probe5_to_full_spearman": -0.118,
+   "probe5_seconds": 0.0,
+   "probe20_auroc": 61.2,
+   "probe20_to_full_spearman": 0.511,
+   "probe20_seconds": 0.0,
+   "budget5_to_budget20_spearman": 0.639
+  }
+ },
+ "books": {
+  "reconstruction": {
+   "full_auroc": 49.8,
+   "probe5_auroc": 56.4,
+   "probe5_to_full_spearman": 0.521,
+   "probe5_seconds": 0.0,
+   "probe20_auroc": 46.3,
+   "probe20_to_full_spearman": 0.727,
+   "probe20_seconds": 0.0,
+   "budget5_to_budget20_spearman": 0.269
+  },
+  "contrastive": {
+   "full_auroc": 46.7,
+   "probe5_auroc": 56.0,
+   "probe5_to_full_spearman": 0.082,
+   "probe5_seconds": 0.0,
+   "probe20_auroc": 53.5,
+   "probe20_to_full_spearman": 0.011,
+   "probe20_seconds": 0.1,
+   "budget5_to_budget20_spearman": 0.044
+  },
+  "adversarial": {
+   "full_auroc": 50.0,
+   "probe5_auroc": 50.0,
+   "probe5_to_full_spearman": 1.0,
+   "probe5_seconds": 0.0,
+   "probe20_auroc": 50.0,
+   "probe20_to_full_spearman": 1.0,
+   "probe20_seconds": 0.1,
+   "budget5_to_budget20_spearman": 1.0
+  },
+  "one_class": {
+   "full_auroc": 49.9,
+   "probe5_auroc": 53.9,
+   "probe5_to_full_spearman": 0.865,
+   "probe5_seconds": 0.0,
+   "probe20_auroc": 49.9,
+   "probe20_to_full_spearman": 0.943,
+   "probe20_seconds": 0.1,
+   "budget5_to_budget20_spearman": 0.931
+  }
+ },
+ "enron": {
+  "reconstruction": {
+   "full_auroc": 26.4,
+   "probe5_auroc": 28.2,
+   "probe5_to_full_spearman": 0.459,
+   "probe5_seconds": 0.2,
+   "probe20_auroc": 20.6,
+   "probe20_to_full_spearman": 0.695,
+   "probe20_seconds": 0.8,
+   "budget5_to_budget20_spearman": 0.794
+  },
+  "contrastive": {
+   "full_auroc": 45.9,
+   "probe5_auroc": 60.8,
+   "probe5_to_full_spearman": 0.168,
+   "probe5_seconds": 0.7,
+   "probe20_auroc": 26.6,
+   "probe20_to_full_spearman": 0.162,
+   "probe20_seconds": 2.7,
+   "budget5_to_budget20_spearman": 0.178
+  },
+  "adversarial": {
+   "full_auroc": 45.8,
+   "probe5_auroc": 63.0,
+   "probe5_to_full_spearman": -0.334,
+   "probe5_seconds": 0.4,
+   "probe20_auroc": 24.8,
+   "probe20_to_full_spearman": 0.627,
+   "probe20_seconds": 2.0,
+   "budget5_to_budget20_spearman": -0.102
+  },
+  "one_class": {
+   "full_auroc": 62.2,
+   "probe5_auroc": 29.9,
+   "probe5_to_full_spearman": -0.008,
+   "probe5_seconds": 0.5,
+   "probe20_auroc": 63.2,
+   "probe20_to_full_spearman": 0.196,
+   "probe20_seconds": 1.8,
+   "budget5_to_budget20_spearman": 0.344
+  }
+ },
+ "reddit": {
+  "reconstruction": {
+   "full_auroc": 49.6,
+   "probe5_auroc": 49.1,
+   "probe5_to_full_spearman": -0.141,
+   "probe5_seconds": 0.3,
+   "probe20_auroc": 54.0,
+   "probe20_to_full_spearman": 0.164,
+   "probe20_seconds": 1.3,
+   "budget5_to_budget20_spearman": -0.06
+  },
+  "contrastive": {
+   "full_auroc": 51.7,
+   "probe5_auroc": 45.9,
+   "probe5_to_full_spearman": 0.336,
+   "probe5_seconds": 0.8,
+   "probe20_auroc": 49.7,
+   "probe20_to_full_spearman": 0.479,
+   "probe20_seconds": 2.9,
+   "budget5_to_budget20_spearman": 0.556
+  },
+  "adversarial": {
+   "full_auroc": 54.9,
+   "probe5_auroc": 56.3,
+   "probe5_to_full_spearman": 0.94,
+   "probe5_seconds": 0.4,
+   "probe20_auroc": 47.9,
+   "probe20_to_full_spearman": -0.124,
+   "probe20_seconds": 1.6,
+   "budget5_to_budget20_spearman": -0.156
+  },
+  "one_class": {
+   "full_auroc": 52.0,
+   "probe5_auroc": 59.1,
+   "probe5_to_full_spearman": 0.074,
+   "probe5_seconds": 0.5,
+   "probe20_auroc": 44.0,
+   "probe20_to_full_spearman": -0.245,
+   "probe20_seconds": 1.9,
+   "budget5_to_budget20_spearman": -0.12
+  }
+ },
+ "inj_cora": {
+  "reconstruction": {
+   "full_auroc": 72.4,
+   "probe5_auroc": 71.3,
+   "probe5_to_full_spearman": 0.98,
+   "probe5_seconds": 0.4,
+   "probe20_auroc": 70.9,
+   "probe20_to_full_spearman": 0.979,
+   "probe20_seconds": 1.3,
+   "budget5_to_budget20_spearman": 0.99
+  },
+  "contrastive": {
+   "full_auroc": 42.0,
+   "probe5_auroc": 35.4,
+   "probe5_to_full_spearman": 0.28,
+   "probe5_seconds": 0.4,
+   "probe20_auroc": 40.5,
+   "probe20_to_full_spearman": 0.242,
+   "probe20_seconds": 1.6,
+   "budget5_to_budget20_spearman": 0.291
+  },
+  "adversarial": {
+   "full_auroc": 35.4,
+   "probe5_auroc": 48.5,
+   "probe5_to_full_spearman": 0.202,
+   "probe5_seconds": 0.2,
+   "probe20_auroc": 39.8,
+   "probe20_to_full_spearman": 0.188,
+   "probe20_seconds": 0.5,
+   "budget5_to_budget20_spearman": 0.338
+  },
+  "one_class": {
+   "full_auroc": 50.0,
+   "probe5_auroc": 49.9,
+   "probe5_to_full_spearman": 0.961,
+   "probe5_seconds": 0.1,
+   "probe20_auroc": 50.0,
+   "probe20_to_full_spearman": 1.0,
+   "probe20_seconds": 0.2,
+   "budget5_to_budget20_spearman": 0.961
+  },
+  "subgraph_contrast": {
+   "full_auroc": 88.4,
+   "probe5_auroc": 69.4,
+   "probe5_to_full_spearman": 0.398,
+   "probe5_seconds": 2.2,
+   "probe20_auroc": 80.5,
+   "probe20_to_full_spearman": 0.689,
+   "probe20_seconds": 5.9,
+   "budget5_to_budget20_spearman": 0.391
+  }
+ },
+ "weibo": {
+  "reconstruction": {
+   "full_auroc": 87.0,
+   "probe5_auroc": 91.4,
+   "probe5_to_full_spearman": 0.944,
+   "probe5_seconds": 2.3,
+   "probe20_auroc": 90.8,
+   "probe20_to_full_spearman": 0.944,
+   "probe20_seconds": 8.8,
+   "budget5_to_budget20_spearman": 0.994
+  },
+  "contrastive": {
+   "full_auroc": 43.4,
+   "probe5_auroc": 45.6,
+   "probe5_to_full_spearman": 0.277,
+   "probe5_seconds": 1.8,
+   "probe20_auroc": 39.7,
+   "probe20_to_full_spearman": 0.246,
+   "probe20_seconds": 6.3,
+   "budget5_to_budget20_spearman": 0.309
+  },
+  "adversarial": {
+   "full_auroc": 73.1,
+   "probe5_auroc": 53.0,
+   "probe5_to_full_spearman": 0.134,
+   "probe5_seconds": 1.0,
+   "probe20_auroc": 46.9,
+   "probe20_to_full_spearman": -0.051,
+   "probe20_seconds": 4.3,
+   "budget5_to_budget20_spearman": -0.129
+  },
+  "one_class": {
+   "full_auroc": 70.1,
+   "probe5_auroc": 88.0,
+   "probe5_to_full_spearman": 0.616,
+   "probe5_seconds": 1.0,
+   "probe20_auroc": 84.0,
+   "probe20_to_full_spearman": 0.553,
+   "probe20_seconds": 3.6,
+   "budget5_to_budget20_spearman": 0.748
+  },
+  "subgraph_contrast": {
+   "full_auroc": 89.3,
+   "probe5_auroc": 83.1,
+   "probe5_to_full_spearman": 0.433,
+   "probe5_seconds": 4.3,
+   "probe20_auroc": 85.3,
+   "probe20_to_full_spearman": 0.515,
+   "probe20_seconds": 13.5,
+   "budget5_to_budget20_spearman": 0.34
+  }
+ },
+ "inj_amazon": {
+  "reconstruction": {
+   "full_auroc": 74.2,
+   "probe5_auroc": 74.2,
+   "probe5_to_full_spearman": 1.0,
+   "probe5_seconds": 5.4,
+   "probe20_auroc": 74.2,
+   "probe20_to_full_spearman": 1.0,
+   "probe20_seconds": 19.5,
+   "budget5_to_budget20_spearman": 0.999
+  },
+  "contrastive": {
+   "full_auroc": 38.8,
+   "probe5_auroc": 40.5,
+   "probe5_to_full_spearman": 0.856,
+   "probe5_seconds": 3.3,
+   "probe20_auroc": 39.3,
+   "probe20_to_full_spearman": 0.88,
+   "probe20_seconds": 13.0,
+   "budget5_to_budget20_spearman": 0.858
+  },
+  "adversarial": {
+   "full_auroc": 32.2,
+   "probe5_auroc": 42.2,
+   "probe5_to_full_spearman": 0.293,
+   "probe5_seconds": 1.3,
+   "probe20_auroc": 39.6,
+   "probe20_to_full_spearman": 0.357,
+   "probe20_seconds": 5.0,
+   "budget5_to_budget20_spearman": 0.1
+  },
+  "one_class": {
+   "full_auroc": 50.0,
+   "probe5_auroc": 64.9,
+   "probe5_to_full_spearman": 0.007,
+   "probe5_seconds": 1.6,
+   "probe20_auroc": 50.0,
+   "probe20_to_full_spearman": 0.999,
+   "probe20_seconds": 5.8,
+   "budget5_to_budget20_spearman": 0.008
+  },
+  "subgraph_contrast": {
+   "full_auroc": 93.8,
+   "probe5_auroc": 78.0,
+   "probe5_to_full_spearman": 0.525,
+   "probe5_seconds": 7.1,
+   "probe20_auroc": 87.2,
+   "probe20_to_full_spearman": 0.721,
+   "probe20_seconds": 16.4,
+   "budget5_to_budget20_spearman": 0.608
+  }
+ },
+ "tolokers": {
+  "reconstruction": {
+   "full_auroc": 44.7,
+   "probe5_auroc": 39.2,
+   "probe5_to_full_spearman": 0.434,
+   "probe5_seconds": 1.6,
+   "probe20_auroc": 44.1,
+   "probe20_to_full_spearman": 0.73,
+   "probe20_seconds": 5.6,
+   "budget5_to_budget20_spearman": 0.395
+  },
+  "contrastive": {
+   "full_auroc": 48.5,
+   "probe5_auroc": 47.9,
+   "probe5_to_full_spearman": 0.375,
+   "probe5_seconds": 3.9,
+   "probe20_auroc": 44.1,
+   "probe20_to_full_spearman": 0.388,
+   "probe20_seconds": 14.0,
+   "budget5_to_budget20_spearman": 0.624
+  },
+  "adversarial": {
+   "full_auroc": 52.8,
+   "probe5_auroc": 41.0,
+   "probe5_to_full_spearman": -0.165,
+   "probe5_seconds": 1.8,
+   "probe20_auroc": 45.2,
+   "probe20_to_full_spearman": 0.327,
+   "probe20_seconds": 8.0,
+   "budget5_to_budget20_spearman": 0.508
+  },
+  "one_class": {
+   "full_auroc": 62.7,
+   "probe5_auroc": 43.1,
+   "probe5_to_full_spearman": -0.032,
+   "probe5_seconds": 3.6,
+   "probe20_auroc": 47.8,
+   "probe20_to_full_spearman": 0.162,
+   "probe20_seconds": 11.7,
+   "budget5_to_budget20_spearman": 0.866
+  }
+ }
+}

@@ -1,0 +1,267 @@
+{
+  "note": "Demsar 2006 protocol; AutoGAD excluded (label-guided). AUROC means from the shipped artifacts (= Table II); AP means from ap_table.json (same runs).",
+  "auroc": {
+    "primary": {
+      "tag": "primary_8methods_failworst_auroc",
+      "methods": [
+        "DOMINANT",
+        "AnomalyDAE",
+        "DONE",
+        "CoLA",
+        "GAAN",
+        "OCGNN",
+        "Radar",
+        "SL-GAD",
+        "ARCADE"
+      ],
+      "N": 10,
+      "k": 9,
+      "avg_ranks": {
+        "DOMINANT": 5.25,
+        "AnomalyDAE": 5.7,
+        "DONE": 5.0,
+        "CoLA": 5.6,
+        "GAAN": 6.3,
+        "OCGNN": 5.6,
+        "Radar": 6.85,
+        "SL-GAD": 3.1,
+        "ARCADE": 1.6
+      },
+      "friedman": {
+        "chi2_F": 28.74,
+        "p_chi2": 0.0004,
+        "iman_davenport_F": 5.046,
+        "df": [
+          8,
+          72
+        ],
+        "p_F": 0.0001
+      },
+      "nemenyi_CD": 3.799,
+      "bonferroni_dunn_CD": 3.336,
+      "bonferroni_dunn_vs_control": {
+        "DOMINANT": {
+          "rank_gap": 3.65,
+          "significant_vs_ARCADE": true
+        },
+        "AnomalyDAE": {
+          "rank_gap": 4.1,
+          "significant_vs_ARCADE": true
+        },
+        "DONE": {
+          "rank_gap": 3.4,
+          "significant_vs_ARCADE": true
+        },
+        "CoLA": {
+          "rank_gap": 4.0,
+          "significant_vs_ARCADE": true
+        },
+        "GAAN": {
+          "rank_gap": 4.7,
+          "significant_vs_ARCADE": true
+        },
+        "OCGNN": {
+          "rank_gap": 4.0,
+          "significant_vs_ARCADE": true
+        },
+        "Radar": {
+          "rank_gap": 5.25,
+          "significant_vs_ARCADE": true
+        },
+        "SL-GAD": {
+          "rank_gap": 1.5,
+          "significant_vs_ARCADE": false
+        }
+      }
+    },
+    "robustness": {
+      "tag": "robustness_completecase_auroc",
+      "methods": [
+        "AnomalyDAE",
+        "DONE",
+        "CoLA",
+        "OCGNN",
+        "SL-GAD",
+        "ARCADE"
+      ],
+      "N": 10,
+      "k": 6,
+      "avg_ranks": {
+        "AnomalyDAE": 4.2,
+        "DONE": 3.7,
+        "CoLA": 4.5,
+        "OCGNN": 4.6,
+        "SL-GAD": 2.5,
+        "ARCADE": 1.5
+      },
+      "friedman": {
+        "chi2_F": 22.1143,
+        "p_chi2": 0.0005,
+        "iman_davenport_F": 7.1373,
+        "df": [
+          5,
+          45
+        ],
+        "p_F": 0.0001,
+        "scipy_chi2": 22.1143,
+        "scipy_p": 0.0004980418791282303
+      },
+      "nemenyi_CD": 2.384,
+      "bonferroni_dunn_CD": 2.155,
+      "bonferroni_dunn_vs_control": {
+        "AnomalyDAE": {
+          "rank_gap": 2.7,
+          "significant_vs_ARCADE": true
+        },
+        "DONE": {
+          "rank_gap": 2.2,
+          "significant_vs_ARCADE": true
+        },
+        "CoLA": {
+          "rank_gap": 3.0,
+          "significant_vs_ARCADE": true
+        },
+        "OCGNN": {
+          "rank_gap": 3.1,
+          "significant_vs_ARCADE": true
+        },
+        "SL-GAD": {
+          "rank_gap": 1.0,
+          "significant_vs_ARCADE": false
+        }
+      }
+    }
+  },
+  "ap": {
+    "primary": {
+      "tag": "primary_8methods_failworst_ap",
+      "methods": [
+        "DOMINANT",
+        "AnomalyDAE",
+        "DONE",
+        "CoLA",
+        "GAAN",
+        "OCGNN",
+        "Radar",
+        "SL-GAD",
+        "ARCADE"
+      ],
+      "N": 10,
+      "k": 9,
+      "avg_ranks": {
+        "DOMINANT": 5.85,
+        "AnomalyDAE": 4.8,
+        "DONE": 4.3,
+        "CoLA": 5.4,
+        "GAAN": 6.4,
+        "OCGNN": 6.2,
+        "Radar": 6.55,
+        "SL-GAD": 3.5,
+        "ARCADE": 2.0
+      },
+      "friedman": {
+        "chi2_F": 24.62,
+        "p_chi2": 0.0018,
+        "iman_davenport_F": 4.0011,
+        "df": [
+          8,
+          72
+        ],
+        "p_F": 0.0006
+      },
+      "nemenyi_CD": 3.799,
+      "bonferroni_dunn_CD": 3.336,
+      "bonferroni_dunn_vs_control": {
+        "DOMINANT": {
+          "rank_gap": 3.85,
+          "significant_vs_ARCADE": true
+        },
+        "AnomalyDAE": {
+          "rank_gap": 2.8,
+          "significant_vs_ARCADE": false
+        },
+        "DONE": {
+          "rank_gap": 2.3,
+          "significant_vs_ARCADE": false
+        },
+        "CoLA": {
+          "rank_gap": 3.4,
+          "significant_vs_ARCADE": true
+        },
+        "GAAN": {
+          "rank_gap": 4.4,
+          "significant_vs_ARCADE": true
+        },
+        "OCGNN": {
+          "rank_gap": 4.2,
+          "significant_vs_ARCADE": true
+        },
+        "Radar": {
+          "rank_gap": 4.55,
+          "significant_vs_ARCADE": true
+        },
+        "SL-GAD": {
+          "rank_gap": 1.5,
+          "significant_vs_ARCADE": false
+        }
+      }
+    },
+    "robustness": {
+      "tag": "robustness_completecase_ap",
+      "methods": [
+        "AnomalyDAE",
+        "DONE",
+        "CoLA",
+        "OCGNN",
+        "SL-GAD",
+        "ARCADE"
+      ],
+      "N": 10,
+      "k": 6,
+      "avg_ranks": {
+        "AnomalyDAE": 3.55,
+        "DONE": 3.5,
+        "CoLA": 4.45,
+        "OCGNN": 4.95,
+        "SL-GAD": 2.65,
+        "ARCADE": 1.9
+      },
+      "friedman": {
+        "chi2_F": 17.9714,
+        "p_chi2": 0.003,
+        "iman_davenport_F": 5.05,
+        "df": [
+          5,
+          45
+        ],
+        "p_F": 0.0009,
+        "scipy_chi2": 18.2849,
+        "scipy_p": 0.0026097628949418674
+      },
+      "nemenyi_CD": 2.384,
+      "bonferroni_dunn_CD": 2.155,
+      "bonferroni_dunn_vs_control": {
+        "AnomalyDAE": {
+          "rank_gap": 1.65,
+          "significant_vs_ARCADE": false
+        },
+        "DONE": {
+          "rank_gap": 1.6,
+          "significant_vs_ARCADE": false
+        },
+        "CoLA": {
+          "rank_gap": 2.55,
+          "significant_vs_ARCADE": true
+        },
+        "OCGNN": {
+          "rank_gap": 3.05,
+          "significant_vs_ARCADE": true
+        },
+        "SL-GAD": {
+          "rank_gap": 0.75,
+          "significant_vs_ARCADE": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "BlogCatalog": {
+    "auroc": 77.27,
+    "auprc": 32.25,
+    "config": {
+      "lr": 0.0005,
+      "alpha": 0.7,
+      "dim": 128,
+      "dropout": 0.3,
+      "contamination": 0.1,
+      "layer": 3,
+      "a_mode": 3,
+      "s_mode": 2,
+      "GNN": "GraphSAGE"
+    },
+    "budget": 60,
+    "secs": 742
+  },
+  "ACM": {
+    "auroc": 89.61,
+    "auprc": 25.96,
+    "config": {
+      "lr": 0.005,
+      "alpha": 0.9,
+      "dim": 256,
+      "dropout": 0.3,
+      "contamination": 0.1,
+      "layer": 4,
+      "a_mode": 3,
+      "s_mode": 2,
+      "GNN": "GraphSAGE"
+    },
+    "budget": 60,
+    "secs": 2785
+  },
+  "Flickr": {
+    "auroc": 0.0,
+    "budget": 60,
+    "secs": 60
+  }
+}

@@ -1,0 +1,50 @@
+"""Component-based GAD method builder — architecture-level fusion."""
+
+from arcade.components.registry import (
+    COMPONENTS,
+    ComponentSpec,
+    KNOWN_RECIPES,
+    analyze_graph,
+    component_info,
+    recommend_complements,
+    recommend_components,
+)
+from arcade.components.builder import (
+    MethodBuilder,
+    ComposedMethod,
+    GNNEncoder,
+    FeatureDecoder,
+    StructureDecoder,
+    ReconstructionObjective,
+    ContrastiveObjective,
+    SVDDObjective,
+    NeighborhoodJSDObjective,
+    NeighborPredictionObjective,
+    CommunityDeviationObjective,
+    GADNRObjective,
+    LocalAffinityObjective,
+    EgoMatchingObjective,
+    SharedEncoderFusion,
+    CrossAttentionFusion,
+    EnsembleGateFusion,
+    DualEncoderAttentionFusion,
+)
+
+__all__ = [
+    "COMPONENTS",
+    "ComponentSpec",
+    "KNOWN_RECIPES",
+    "component_info",
+    "recommend_components",
+    "MethodBuilder",
+    "ComposedMethod",
+    "GNNEncoder",
+    "FeatureDecoder",
+    "StructureDecoder",
+    "ReconstructionObjective",
+    "ContrastiveObjective",
+    "SVDDObjective",
+    "SharedEncoderFusion",
+    "CrossAttentionFusion",
+    "EnsembleGateFusion",
+]

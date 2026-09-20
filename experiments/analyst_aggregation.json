@@ -1,0 +1,85 @@
+{
+  "median_of_analysts": {
+    "enron": 41.2,
+    "books": 40.0,
+    "disney": 86.4,
+    "weibo": 93.8,
+    "inj_amazon": 85.9,
+    "acm": 93.4,
+    "blogcatalog": 75.8,
+    "cola_flickr": 75.6
+  },
+  "majority_vote": {
+    "enron": {
+      "selected": [
+        "community",
+        "homophily_violation",
+        "spectral"
+      ],
+      "auroc": 29.9
+    },
+    "books": {
+      "selected": [
+        "attr_struct_mismatch",
+        "community",
+        "homophily_violation",
+        "local_affinity"
+      ],
+      "auroc": 33.8
+    },
+    "disney": {
+      "selected": [
+        "attr_struct_mismatch",
+        "community",
+        "homophily_violation",
+        "local_affinity",
+        "peripheral_mismatch"
+      ],
+      "auroc": 86.4
+    },
+    "weibo": {
+      "selected": [
+        "attr_struct_mismatch",
+        "homophily_violation",
+        "linear_residual",
+        "subgraph_contrast"
+      ],
+      "auroc": 94.9
+    },
+    "inj_amazon": {
+      "selected": [
+        "community",
+        "local_affinity",
+        "subgraph_contrast"
+      ],
+      "auroc": 86.0
+    },
+    "acm": {
+      "selected": [
+        "clique_density",
+        "local_affinity",
+        "subgraph_contrast"
+      ],
+      "auroc": 98.9
+    },
+    "blogcatalog": {
+      "selected": [
+        "clique_density",
+        "local_affinity",
+        "subgraph_contrast"
+      ],
+      "auroc": 78.9
+    },
+    "cola_flickr": {
+      "selected": [
+        "clique_density",
+        "community",
+        "homophily_violation",
+        "subgraph_contrast"
+      ],
+      "auroc": 76.5
+    }
+  },
+  "median_avg": 74.0,
+  "vote_avg": 73.2
+}

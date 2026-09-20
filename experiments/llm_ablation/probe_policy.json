@@ -1,0 +1,97 @@
+{
+  "_provenance": "Calibrated by experiments/build_probe_policy.py from experiments/probe_fidelity.json: the rank correlation between each paradigm's short probe and its own full run, over 8 study graphs. This statistic uses no labels. A paradigm is admitted at a budget when the correlation has median >= 0.5 and minimum >= 0.0 across those graphs. Absence of a probe is a statement about the preview, never about the paradigm.",
+  "calibration_graphs": [
+    "books",
+    "disney",
+    "enron",
+    "inj_amazon",
+    "inj_cora",
+    "reddit",
+    "tolokers",
+    "weibo"
+  ],
+  "median_min": 0.5,
+  "worst_min": 0.0,
+  "paradigms": {
+    "adversarial": {
+      "budget5": {
+        "median": -0.139,
+        "worst": -0.382,
+        "n_graphs": 7,
+        "admitted": false
+      },
+      "budget20": {
+        "median": 0.28,
+        "worst": -0.637,
+        "n_graphs": 7,
+        "admitted": false
+      },
+      "show_probe": false,
+      "budget": null
+    },
+    "contrastive": {
+      "budget5": {
+        "median": 0.276,
+        "worst": 0.054,
+        "n_graphs": 8,
+        "admitted": false
+      },
+      "budget20": {
+        "median": 0.255,
+        "worst": 0.046,
+        "n_graphs": 8,
+        "admitted": false
+      },
+      "show_probe": false,
+      "budget": null
+    },
+    "one_class": {
+      "budget5": {
+        "median": -0.005,
+        "worst": -0.124,
+        "n_graphs": 8,
+        "admitted": false
+      },
+      "budget20": {
+        "median": 0.718,
+        "worst": -0.216,
+        "n_graphs": 8,
+        "admitted": false
+      },
+      "show_probe": false,
+      "budget": null
+    },
+    "reconstruction": {
+      "budget5": {
+        "median": 0.74,
+        "worst": -0.484,
+        "n_graphs": 8,
+        "admitted": false
+      },
+      "budget20": {
+        "median": 0.87,
+        "worst": 0.24,
+        "n_graphs": 8,
+        "admitted": true
+      },
+      "show_probe": true,
+      "budget": 20
+    },
+    "subgraph_contrast": {
+      "budget5": {
+        "median": 0.433,
+        "worst": 0.398,
+        "n_graphs": 3,
+        "admitted": false
+      },
+      "budget20": {
+        "median": 0.689,
+        "worst": 0.515,
+        "n_graphs": 3,
+        "admitted": true
+      },
+      "show_probe": true,
+      "budget": 20
+    }
+  }
+}

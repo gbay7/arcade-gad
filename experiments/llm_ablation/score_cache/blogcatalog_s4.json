@@ -1,0 +1,46 @@
+{
+  "dataset": "blogcatalog",
+  "seed": 4,
+  "applicable": [
+    "reconstruction",
+    "local_affinity",
+    "contrastive",
+    "adversarial",
+    "subgraph_contrast",
+    "one_class",
+    "density",
+    "community",
+    "homophily_violation",
+    "spectral",
+    "attr_struct_mismatch",
+    "clique_density"
+  ],
+  "cached": [
+    "adversarial",
+    "attr_struct_mismatch",
+    "clique_density",
+    "community",
+    "contrastive",
+    "density",
+    "homophily_violation",
+    "local_affinity",
+    "one_class",
+    "reconstruction",
+    "spectral",
+    "subgraph_contrast"
+  ],
+  "timings_s": {
+    "reconstruction": 50.0,
+    "local_affinity": 0.9,
+    "contrastive": 82.6,
+    "adversarial": 31.1,
+    "subgraph_contrast": 117.1,
+    "one_class": 16.7,
+    "density": 2.1,
+    "community": 0.4,
+    "homophily_violation": 0.8,
+    "spectral": 0.2,
+    "attr_struct_mismatch": 2.8,
+    "clique_density": 3.1
+  }
+}
